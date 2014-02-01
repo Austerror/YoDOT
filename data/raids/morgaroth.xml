@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raid>
+	<announce delay="1000" type="Event" message="A hot, hellish wind has started to blow through the ruins of Ashzarah." />
+	<announce delay="45000" type="Event" message="There is an evil presence at the ruins of Ashzarah." />
+	<announce delay="120000" type="Event" message="Evil Cultists have called an ancient evil into the ruins of Ashzarah. Beware of its power mortals." />
+	<announce delay="180000" type="Event" message="Morgaroth has been summoned from hell to plague the lands of mortals again." />
+	<areaspawn delay="120000" fromx="1295" fromy="1091" fromz="7" tox="1321" toy="1128" toz="7">
+		<monster name="Morgaroth" ref="yes" amount="1" />
+	</areaspawn>
+</raid>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Deepling Warrior" nameDescription="a deepling warrior" race="blood" experience="1500" speed="210" manacost="0">
+	<health now="1600" max="1600"/>
+	<look type="441" corpse="15175"/>
+	<targetchange interval="3000" chance="5"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="95"/>
+		<flag runonhealth="30"/>
+	</flags>
+	<attacks>
+		<attack name="physical" range="1" interval="2000" min="-1" max="-300"/>
+		<attack name="physical" interval="2000" chance="34" range="7" radius="1" target="1" min="-1" max="-290">
+			<attribute key="shootEffect" value="WHIRLWINDAXE"/>
+		</attack>
+	</attacks>
+	<defenses armor="25" defense="30">
+		<defense name="healing" interval="1000" chance="25" min="50" max="150">
+		  <attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element holyPercent="-20"/>
+		<element deathPercent="20"/>
+	</elements>
+	<immunities>
+		<immunity fire="1"/>
+		<immunity ice="1"/>
+		<immunity drown="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Jou wjil ajll djie!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="180" chance="100000" /> <!-- Gold Coin -->
+		<item id="15488" chance="15110" /> <!-- Deepling Filet -->
+		<item id="15426" chance="14860" /> <!-- Deeptags -->
+		<item id="15452" chance="10990" /> <!-- Deepling Ridge -->
+		<item id="7590" chance="10050" /> <!-- Great Mana Potion -->
+		<item id="7591" chance="10040" /> <!-- Great Health Potion -->
+		<item id="15425" chance="9990" /> <!-- Deepling Warts -->
+		<item id="15649" countmax="5" chance="3440" /> <!-- Vortex Bolts -->
+		<item id="2168" chance="3010" /> <!-- Life Ring -->
+		<item id="2149" chance="3000" /> <!-- Small Emerald -->
+		<item id="13838" chance="980" /> <!-- Heavy Trident -->
+		<item id="5895" chance="870" /> <!-- Heavy Trident -->
+		<item id="13870" chance="620" /> <!-- Eye of a Deepling -->
+		<item id="15453" chance="620" /> <!-- Warrior's Shield -->
+		<item id="15451" chance="500" /> <!-- Warrior's Axe -->
+	</loot>
+</monster>

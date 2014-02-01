@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Gus" script="data/npc/scripts/gus.lua" walkinterval="0" floorchange="0" direction="1">
+	<health now="100" max="100"/>
+	<look type="128" head="110" body="80" legs="40" feet="90" addons="1"/>
+   <flags>
+    <flag pushable="0"/>
+  </flags>
+    <parameters>
+        <parameter key="message_greet" value="Welcome |PLAYERNAME|."/>
+        <parameter key="message_alreadyfocused" value="We're already talking |PLAYERNAME|."/>
+        <parameter key="message_farewell" value="Goodbye and take care."/>
+    </parameters>
+</npc>

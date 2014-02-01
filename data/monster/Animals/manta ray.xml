@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Manta Ray" nameDescription="a manta ray" race="blood" experience="125" speed="200" manacost="0">
+	<health now="198" max="198"/>
+	<look type="449" corpse="15279"/>
+	<targetchange interval="2000" chance="9"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="1"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="1"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="20"/>
+	</flags>
+	<attacks>
+		<attack name="physical" range="1" interval="2000" min="-1" max="-110"/>
+		<attack name="energy" interval="2000" chance="34" range="7" radius="1" target="1" min="-75" max="-120">
+			<attribute key="shootEffect" value="ENERGYBALL"/>
+		</attack>
+	</attacks>
+	<defenses armor="22" defense="18">
+	</defenses>
+	<elements>
+		<element holyPercent="-20"/>
+	</elements>
+	<immunities>
+		<immunity holy="1"/>
+		<immunity death="1"/>
+		<immunity lifedrain="1"/>
+	</immunities>
+	<voices interval="2000" chance="9">
+		<voice sentence="Flap flap flap!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="39" chance="62720" /> <!-- Gold Coin -->
+	</loot>
+</monster>

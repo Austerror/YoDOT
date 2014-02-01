@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Shark" nameDescription="a shark" race="blood" experience="60" speed="450" manacost="465">
+	<health now="198" max="198"/>
+	<look type="453" corpse="13308"/>
+	<targetchange interval="2000" chance="9"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="1"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="1"/>
+		<flag pushable="1"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="20"/>
+	</flags>
+	<attacks>
+
+	</attacks>
+	<defenses armor="30" defense="24"/>
+	<voices interval="2000" chance="9">
+
+	</voices>
+	<loot>
+
+	</loot>
+</monster>

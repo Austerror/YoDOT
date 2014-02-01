@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Dexter" script="data/npc/scripts/dexter.lua" walkinterval="0" floorchange="0" access="5" level="1" maglevel="1" direction="2">
+	<health now="150" max="150"/>
+	<look type="464" head="107" body="109" legs="19" feet="15" corpse="2212"/>
+	<parameters>
+	</parameters>
+</npc>

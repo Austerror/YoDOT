@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Lizard Dragon Priest" nameDescription="a lizard dragon priest" race="blood" experience="1200" speed="320" manacost="0">
+<health now="1450" max="1450"/>
+<look type="339" corpse="11277"/>
+<targetchange interval="5000" chance="8"/>
+<strategy attack="100" defense="0"/>
+<flags>
+<flag summonable="0"/>
+<flag attackable="1"/>
+<flag hostile="1"/>
+<flag illusionable="1"/>
+<flag convinceable="0"/>
+<flag pushable="0"/>
+<flag canpushitems="1"/>
+<flag canpushcreatures="0"/>
+<flag targetdistance="1"/>
+<flag staticattack="90"/>
+<flag runonhealth="50"/>
+</flags>
+<attacks>
+	<attack name="melee" interval="2000" skill="40" attack="60"/>
+<attack name="fire" interval="3000" chance="12" length="8" spread="3" min="-125" max="-190">
+<attribute key="areaEffect" value="firearea"/>
+</attack>
+</attacks>
+	<defenses armor="25" defense="25">
+		<defense name="healing" interval="1000" chance="18" min="200" max="400">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="invisible" interval="2000" chance="15" duration="4000">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+<elements>
+<element firePercent="45"/>
+</elements>
+<immunities>
+<immunity earth="1"/>
+<immunity invisible="1"/>
+</immunities>
+<summons maxSummons="2">
+<summon name="Dragon Hatchling" interval="2000" chance="18" max="2"/>
+</summons>
+<loot>
+	<item id="2148" countmax="155" chance="93680"/> -- GP
+	<item id="7589" chance="12310"/> -- SMP
+	<item id="11361" chance="10250"/> -- Dragon Priest's Wandtip
+	<item id="7590" chance="8080"/> -- GMP
+	<item id="2150" countmax="3" chance="4980"/> -- Small Amethyst
+	<item id="2152" countmax="2" chance="3700"/> -- PP
+	<item id="2187" chance="1400"/> -- WoI
+	<item id="5881" countmax="1" chance="1220"/> -- Lizard Scale
+	<item id="2181" chance="1090"/> -- Terra Rod
+	<item id="11245" countmax="1" chance="100"/> -- Ripe Rice
+	<item id="2154" chance="960"/> -- Yellow Gem
+	<item id="5876" countmax="1" chance="780"/> -- Lizard Leather
+	<item id="8871" chance="750"/> -- Focus Cape
+	<item id="2168" chance="690"/> -- Life Ring
+	<item id="11303" chance="460"/> -- Zaoan Shoes
+	<item id="11356" chance="310"/> -- Zaoan Robe
+</loot>
+</monster>

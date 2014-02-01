@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="serpent spawn" nameDescription="a serpent spawn" race="VENOM" experience="2000" speed="240" manacost="0">
+  <health now="3000" max="3000"/>
+  <look type="220" head="20" body="30" legs="40" feet="50" corpse="4323"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="275"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="80" attack="70"/>
+    <attack name="poison" interval="1000" chance="17" range="7" target="1" min="-100" max="-300">
+      <attribute key="shootEffect" value="poison"/>
+      <attribute key="areaEffect" value="greenspark"/>
+    </attack>
+    <attack name="outfit" interval="1000" chance="1" range="7" item="3976" duration="4000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </attack>
+    <attack name="speed" interval="1000" chance="20" range="7" radius="4" target="1" speedchange="-850" duration="120000">
+      <attribute key="shootEffect" value="poison"/>
+      <attribute key="areaEffect" value="greenbubble"/>
+    </attack>
+    <attack name="lifedrain" interval="2000" chance="15" length="8" spread="0" min="-150" max="-400">
+      <attribute key="areaEffect" value="rednote"/>
+    </attack>
+    <attack name="earth" interval="3000" chance="20" length="8" spread="3" min="-50" max="-400">
+      <attribute key="areaEffect" value="poison"/>
+    </attack>
+    <attack name="outfit" interval="1000" chance="15" range="7" item="3976" duration="12000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </attack>
+  </attacks>
+  <defenses armor="25" defense="25">
+    <defense name="healing" interval="1000" chance="17" min="300" max="500">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense name="speed" interval="1000" chance="9" speedchange="320" duration="5000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+  </defenses>
+<elements>
+	<element icePercent="15"/>
+	<element firePercent="-10"/>
+	<element energyPercent="-10"/>
+</elements>
+  <immunities>
+    <immunity earth="0"/>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="Ssssolus for the one"/>
+    <voice sentence="HISSSS" yell="1"/>
+    <voice sentence="Tsssse one will risssse again"/>
+    <voice sentence="I bring you deathhhh, mortalssss"/>
+  </voices>
+  <loot>
+	<item id="2148" countmax="219" chance="96990" /> -- GP
+	<item id="2796" chance="18410" /> -- Green Mushroom
+	<item id="10611" chance="14960" /> -- Snake Skin
+	<item id="2146" chance="11800" /> -- Small Sapphire
+	<item id="2168" chance="6180" /> -- Life Ring
+	<item id="2547" chance="6030" /> -- Power Bolt
+	<item id="2167" chance="6010" /> -- Energy Ring
+	<item id="2033" chance="2880" /> -- Golden Mug
+	<item id="7386" chance="2190" /> -- Mercenary Sword
+	<item id="7590" chance="1950" /> -- GMP
+    <item id="2182" chance="990" /> -- snakebite rod
+	<item id="11230" chance="940" /> -- Winged Tail
+	<!--item id="2528" chance="910" /--> -- Tower Shield
+	<item id="7456" chance="810" /> -- Noble Axe
+	<item id="2177" chance="750" /> -- life Crystal
+	<item id="2479" chance="710" /> -- Strange Helmet
+	<item id="4842" chance="560" /> -- Old Parchment
+	<item id="2475" chance="550" /> -- Warrior Helmet
+	<item id="2487" chance="500" /> -- Crown Armor
+	<item id="2498" chance="140" /> -- Royal Helmet
+	<item id="3971" chance="120" /> -- Charmer's Tiara
+	<item id="8880" chance="80" /> -- Swamplair armor
+	<item id="8902" chance="60" /> -- Spellbook of Mindcontrol
+  </loot>
+</monster>

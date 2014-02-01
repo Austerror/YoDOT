@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<npc name="Auctioneer Ybay" script="data/npc/scripts/auction.lua" walkinterval="0" floorchange="0">
+<health now="100" max="100"/>
+<look type="325" head="0" body="114" legs="0" feet="0" addons="3"/>
+<parameters>
+<parameter key="message_greet" value="Hello |PLAYERNAME|. You can {auction} some items, {collect} gold from sold items, {check} your deposits or {trade} to buy items."/>
+</parameters>
+</npc>

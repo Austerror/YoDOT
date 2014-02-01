@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="" nameDescription="" race="blood" experience="" speed="" manacost="">
+	<health now="" max=""/>
+	<look type="" corpse=""/>
+	<targetchange interval="3000" chance="5"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="1"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="95"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+	</attacks>
+	<defenses armor="" defense="">
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence=""/>
+	</voices>
+	<loot>
+	<item id="2148" countmax="100" chance="94570" /> <!-- Gold Coin -->
+<item id="2148" countmax="135" chance="100000" /> <!-- Gold Coin -->
+<item id="2149" countmax="4" chance="6100" /> <!-- Small Emerald -->
+<item id="7589" chance="5300" /> <!-- Strong Mana Potion -->
+<item id="7588" chance="5070" /> <!-- Strong Health Potion -->
+<item id="7368" countmax="5" chance="4740" /> <!-- Assassin Star -->
+<item id="2789" countmax="5" chance="3890" /> <!-- Brown Mushroom -->
+<item id="2114" chance="1040" /> <!-- Piggy Bank -->
+<item id="2204" chance="960" /> <!-- Energy Ring -->
+<item id="8912" chance="510" /> <!-- Springsprout Rod -->
+<item id="7440" chance="450" /> <!-- Mastermind Potion -->
+<item id="7885" chance="140" /> <!-- Terra Legs -->
+<item id="5904" chance="110" /> <!-- Magic Sulphur -->
+	</loot>
+</monster>

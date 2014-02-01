@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Askarak Prince" nameDescription="an Askarak Prince" race="venom" experience="1700" speed="240" manacost="0">
+	<health now="2600" max="2600"/>
+	<look type="419" corpse="13956"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="700"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="80" attack="55"/>
+
+		<attack name="earth" interval="2000" chance="18" radius="3" target="1" min="-70" max="-250">
+			<attribute key="areaEffect" value="poison"/>
+		</attack>
+
+		<attack name="earth" interval="2000" chance="18" length="5" spread="3" min="-100" max="-200">
+			<attribute key="areaEffect" value="yellowbubble"/>
+		</attack>
+	</attacks>
+	<defenses armor="50" defense="50">
+
+	</defenses>
+	<elements>
+		<element firePercent="-10"/>
+		<element energyPercent="50"/>
+		<element icePercent="50"/>
+	</elements>
+	<immunities>
+		<immunity earth="1"/>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="3000" chance="30">
+		<voice sentence="Bleargh!"/>
+		<voice sentence="Let me take you to Morgaroth!"/>
+	</voices>
+	<loot>
+		<item id="2148" chance="99450" countmax="186" /> -- gold coin
+		<item id="2152" chance="75000" countmax="5" /> -- Platinum Coin
+		<item id="7588" chance="22540" /> -- shp
+		<item id="7589" chance="22540" /> -- smp
+		<item id="2789" chance="10540" countmax="4" /> -- brown mushroom
+		<item id="2149" chance="7500" countmax="5"/> -- small emerald
+		<item id="2165" chance="6580" /> -- Stealth Ring
+		<item id="8912" chance="4580" /> -- Springsprout Rod
+		<item id="5904" chance="4580" /> -- Magic Sulphur
+		<item id="7884" chance="4580" /> -- Terra Mantle
+		<item id="13530" chance="4580" /> -- Demonic Finger
+		<item id="2393" chance="1580" /> -- Giant Sword
+	</loot>
+  </monster>

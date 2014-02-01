@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="pirate Buccaneer" nameDescription="a pirate buccaneer" race="blood" experience="250" speed="230" manacost="595">
+  <health now="425" max="425"/>
+  <look type="97" head="0" body="0" legs="0" feet="0" corpse="6080"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag staticattack="90"/>
+    <flag targetdistance="1"/>
+    <flag runonhealth="50"/>
+  </flags>
+<attacks>
+    <attack name="melee" interval="2000" skill="64" attack="66"/>
+     <attack name="physical" interval="3000" chance="17" range="4" min="-0" max="-80">
+        <attribute key="shootEffect" value="throwingknife"/>
+      </attack>
+</attacks>
+  <defenses armor="25" defense="23"/>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="0"/>
+    <immunity lifedrain="0"/>
+    <immunity paralyze="0"/>
+    <immunity outfit="0"/>
+    <immunity drunk="0"/>
+    <immunity invisible="0"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="Give up!"/>
+  </voices>
+  <loot>
+    <item id="2148" countmax="59" chance="67490" /> -- GP
+    <item id="2050" chance="10140" /> -- Torch
+	<item id="11219" chance="10020" /> -- Compass
+	<item id="2385" chance="10020" /> -- Sabre
+	<item id="2238" chance="9880" /> -- Worn Leather Boots
+	<item id="2410" countmax="6" chance="8950" /> -- Throwing Knife
+	<item id="2513" chance="3800" /> -- Battle Shield
+	<item id="6095" chance="1120" /> -- Pirate Shirt
+    <item id="2463" chance="1120" /> -- Plate Armor
+    <item id="5091" chance="970" /> -- Treasure Map
+	<item id="7588" chance="710"/> -- SHP
+	<item id="6097" chance="550" /> -- Hook
+	<item id="6126" chance="520" /> -- Peg Leg
+    <item id="5926" chance="490" /> -- Pirate Backpack
+	<item id="6098" chance="340" /> -- Eye Patch
+	<item id="5553" chance="110" /> -- Rum Flask
+	<item id="5792" chance="60" /> -- Dice
+  </loot>
+</monster>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Randwick" script="data/npc/scripts/test npc.lua" walkinterval="8000" floorchange="0">
+	<health now="100" max="100"/>
+	<look type="273" head="82" body="77" legs="82" feet="77" addons="3" mount="389" corpse="2212"/>
+	<parameters>
+		<parameter key="message_greet" value="Hey hey |PLAYERNAME|. I {trade} items for Yodot Tokens. You can also see my {other} items that can't be listed in the shop window. I have more items arriving soon."/>
+		<parameter key="message_trade" value="I have more items arriving soon."/>
+	</parameters>
+</npc>

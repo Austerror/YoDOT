@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Joliver" script="joliver.lua" walkinterval="0" floorchange="0">
+	<health now="150" max="150"/>
+	<look type="133" head="114" body="0" legs="95" feet="114" corpse="2212"/>
+   <flags>
+    <flag pushable="0"/>
+  </flags>
+	<parameters>
+		<parameter key="module_shop" value="1"/>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|, are you here for a {daily} cooking quest?"/>
+	</parameters>
+</npc>

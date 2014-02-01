@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Elwynn" script="data/npc/scripts/elwynn.lua" walkinterval="0" floorchange="0" direction="2">
+	<health now="100" max="100"/>
+	<look type="132" head="20" body="39" legs="45" feet="7" direction="1" addons="0"/>
+    <parameters>
+        <parameter key="message_greet" value="Welcome |PLAYERNAME|. I have a {mission} for you if you are interested. Words in light blue like {mission} are keywords that I will respond to."/>
+        <parameter key="message_alreadyfocused" value="We're already talking |PLAYERNAME|."/>
+        <parameter key="message_farewell" value="Goodbye and take care."/>
+    </parameters>
+</npc>

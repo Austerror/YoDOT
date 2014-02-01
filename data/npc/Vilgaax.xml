@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Vilgaax" script="data/npc/scripts/vilgaax.lua" walkinterval="0" floorchange="0" direction="1">
+	<health now="100" max="100"/>
+	<look type="465" head="94" body="98" legs="88" feet="122" addons="2"/>
+	<parameters>
+		<parameter key="message_greet" value="Greeeeeetingssss |PLAYERNAME|. {Trade} withhhh meeeeeee."/>
+	</parameters>
+</npc>

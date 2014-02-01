@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Walt" script="data/npc/scripts/walt.lua" walkinterval="0" floorchange="0" direction="0">
+	<health now="100" max="100"/>
+	<look type="133" head="97" body="98" legs="113" feet="114" addons="3" corpse="2212"/>
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. I {trade} in magical items and run the local {lottery}. If you would like to look at my {potions} only just ask."/>
+		<parameter key="message_needmoremoney" value="You do not have enough money."/>
+		<parameter key="message_decline" value="Is |TOTALCOST| gold coins too much for you? Get out of here!"/>
+	</parameters>
+</npc>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Scaled Tunneler" nameDescription="a scaled tunneler" race="blood" experience="1700" speed="245" manacost="0">
+  <health now="1400" max="1400"/>
+  <look type="527" head="20" body="30" legs="40" feet="50" corpse="19705"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="60" attack="65"/>
+    <attack name="fire" interval="2000" chance="22" range="7" radius="4" target="1" min="-70" max="-140">
+      <attribute key="shootEffect" value="fire"/>
+      <attribute key="areaEffect" value="firearea"/>
+    </attack>
+    <attack name="firefield" interval="1000" chance="15" range="7" radius="4" target="1">
+      <attribute key="shootEffect" value="fire"/>
+    </attack>
+  </attacks>
+  <defenses armor="30" defense="35">
+    <defense name="healing" interval="1000" chance="25" min="22" max="45">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <elements>
+	<element energyPercent="20"/>
+	<element icePercent="-10"/>
+	<element earthPercent="80"/>
+  </elements>
+  <immunities>
+    <immunity fire="1"/>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+
+  </voices>
+  <loot>
+    <item id="2148" countmax="150" chance="100000" /> -- GP
+	<item id="11222" chance="14480" /> -- Lump Of Earth
+	<item id="13757" chance="11990" /> -- Coal
+	<item id="18416" chance="10060" /> -- Green Crystal Splinter
+    <item id="18418" chance="9950" /> -- Blue Crystal Splinter
+    <item id="18417" chance="9104" /> -- Brown Crystal Splinter
+	<item id="18429" chance="8130" /> -- Vein of Ore
+	<item id="18427" chance="5980" /> -- Pulverized Ore
+	<item id="7452" chance="590" /> -- Spiked Squelcher
+  </loot>
+</monster>

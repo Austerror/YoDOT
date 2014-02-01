@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Salamander" nameDescription="a salamander" race="blood" experience="25" speed="" manacost="0">
+	<health now="70" max="70"/>
+	<look type="529" corpse=""/>
+	<targetchange interval="3000" chance="5"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag staticattack="95"/>
+		<flag lightlevel="0"/>
+		<flag lightcolor="0"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+	</attacks>
+	<defenses armor="" defense="">
+	</defenses>
+	<elements>
+		<element icePercent=""/>
+		<element firePercent=""/>
+		<element earthPercent=""/>
+		<element holyPercent=""/>
+		<element energyPercent=""/>
+		<element deathPercent=""/>
+	</elements>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="2000" chance="5">
+		<voice sentence=""/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="14" chance="73430" /> <!-- Gold Coin -->
+<item id="19737" chance="31370" /> <!-- Insectoid Eggs -->
+<item id="2544" countmax="3" chance="8300" /> <!-- Arrow -->
+<item id="8723" chance="5350" /> <!-- Rope -->
+<item id="2398" chance="2950" /> <!-- Mace -->
+<item id="2460" chance="1290" /> <!-- Brass Helmet -->
+<item id="2456" chance="1110" /> <!-- Bow -->
+<item id="7618" chance="370" /> <!-- Health Potion -->
+	</loot>
+</monster>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="slithid mound" nameDescription="a slithid mound" race="venom" experience="500" speed="0" manacost="0">
+  <health now="700" max="700"/>
+  <look typeex="3323" corpse="7349"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="75" attack="75"/>
+  </attacks>
+  <defenses armor="0" defense="0"/>
+  <immunities>
+
+  </immunities>
+  <elements>
+
+  </elements>
+  <summons maxSummons="6">
+    <summon name="slithid drone" interval="1000" chance="25" max="6"/>
+  </summons>
+     <voices interval="2000" chance="5">
+      <voice sentence="Brzzzzzzzzzz!"/>
+    </voices>
+</monster>

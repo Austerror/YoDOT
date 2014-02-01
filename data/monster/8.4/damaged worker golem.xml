@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Damaged Worker Golem" nameDescription="a damaged worker golem" race="undead" experience="95" speed="270" manacost="0">
+	<health now="260" max="260"/>
+	<look type="304" corpse="9801"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" attack="35" skill="28"/>
+		<attack name="physical" interval="2000" chance="15" min="0" max="-45">
+			<attack name="shootEffect" value="smallstone"/>
+		</attack>
+	</attacks>
+	<defenses armor="40" defense="45">
+		<defense name="healing" interval="1000" chance="7" min="20" max="50">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element earthPercent="50"/>
+		<element holyPercent="50"/>
+		<element energyPercent="-5"/>
+		<element physicalPercent="25"/>
+		<element icePercent="10"/>
+		<element deathPercent="10"/>
+	</elements>
+	<immunities>
+		<immunity invisible="1"/>
+		<immunity paralyze="1"/>
+	</immunities>
+	<voices interval="2500" chance="10">
+		<voice sentence="Target Identified: Rat! Termination Initiated."/>
+		<voice sentence="Failure! Failure!"/>
+		<voice sentence="klonk klonk klonk"/>
+		<voice sentence="Rrrtttarrrttarrrtta"/>
+		<voice sentence="Aw... chhhrrr orders"/>
+		<voice sentence="Good morning citizen. How may I serve you?"/>
+		<voice sentence="Danger will... Chrrr! danger!"/>
+		<voice sentence="Self-Diagnosis failed"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="86" chance1="69220" chancemax="0"/> <!-- gps -->
+		<item id="9808" chance="10010"/> <!-- rusty armor -->
+		<item id="8309" countmax="3" chance1="1550" chancemax="0"/> <!-- nails -->
+		<item id="2207" chance="750"/> <!-- sword ring -->
+		<item id="5880" chance="440"/> <!-- iron ore -->
+		<item id="10572" chance="200"/> -- Gear Crystal
+	</loot>
+</monster>

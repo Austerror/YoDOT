@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Thunderstorm" nameDescription="Thunderstorm" race="fire" experience="8000" speed="330" manacost="0">
+	<health now="12000" max="12000"/>
+	<look type="35" corpse="5995"/>
+	<targetchange interval="5000" chance="5"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="4"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="110" attack="110"/>
+	    <attack name="manadrain" interval="2000" chance="13" range="7" min="0" max="-120"/>
+		<attack name="fire" interval="2000" chance="13" range="1" target="1" min="-250" max="-500">
+			<attribute key="shootEffect" value="fire"/>
+			<attribute key="areaEffect" value="fireattack"/>
+		</attack>
+		<attack name="fire" interval="2000" chance="20" range="7" radius="6" target="1" min="-50" max="-400">
+			<attribute key="shootEffect" value="fire"/>
+			<attribute key="areaEffect" value="firearea"/>
+		</attack>
+		<attack name="fire" interval="2000" chance="30" length="4"	spread="2" target="1" min="-90" max="-350">
+			<attribute key="shootEffect" value="fire"/>
+			<attribute key="areaEffect" value="firearea"/>
+		</attack>
+	</attacks>
+	<defenses armor="15" defense="15">
+		<defense name="healing" interval="2000" chance="50" min="175" max="350">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="speed" interval="2000" chance="12" speedchange="380" duration="4000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>
+		<defense name="invisible" interval="3000" chance="10" duration="3000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element icePercent="-20"/>
+		<element holyPercent="-20"/>
+		<element deathPercent="20"/>
+	</elements>
+	<immunities>
+		<immunity fire="1"/>
+		<immunity poison="1"/>
+		<immunity lifedrain="1"/>
+		<immunity paralyze="1"/>
+		<immunity outfit="1"/>
+		<immunity drunk="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<summons maxSummons="2">
+		<summon name="diabolic imp" interval="5500" chance="30"/>
+	</summons>
+	<voices interval="5000" chance="10">
+		<voice sentence="Muahaha!"/>
+		<voice sentence="He he he!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="250" chance="100000"/> -- gold coin
+		<item id="9971" countmax="3" chance="88750" /> <!-- gold ingot -->
+		<item id="6300" chance="12500"/> -- death ring
+		<item id="6529" countmax="25" chance="25000"/> -- infernal bolts
+		<item id="2185" chance="12500"/> -- volcanic rod
+		<item id="7899" chance="12000"/> -- magma coat
+		<item id="7900" chance="12000"/> -- magma monocle
+		<item id="7891" chance="12000"/> -- magma boots
+		<item id="2542" chance="8000"/> -- tempest shield
+		<item id="2470" chance="7500"/> -- golden legs
+		<item id="2472" chance="5000"/> -- magic plate armor
+	</loot>
+</monster>

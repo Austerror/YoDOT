@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="demon skeleton" nameDescription="a demon skeleton" race="undead" experience="240" speed="230" manacost="620">
+  <health now="400" max="400"/>
+  <look type="37" head="20" body="30" legs="40" feet="50" corpse="5963"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" min="-0" max="-185"/>
+    <attack name="lifedrain" interval="2000" chance="10" range="1" min="-30" max="-50"/>
+  </attacks>
+  <defenses armor="25" defense="25"/>
+  	<elements>
+		<element icePercent="-10"/>
+		<element holyPercent="-25"/>
+	</elements>
+  <immunities>
+    <immunity fire="1"/>
+    <immunity poison="1"/>
+    <immunity lifedrain="1"/>
+    <immunity death="1"/>
+    <immunity drunk="1"/>
+  </immunities>
+  <loot>
+    <item id="2148" countmax="50" chance="57760" /> -- GP
+    <item id="2399" countmax="3" chance="10010" /> -- Throwing Star
+	<item id="2050" chance="5090"/> -- Torch
+	<item id="10564" chance="5040"/> -- Demonic Skeletal Hand
+	<item id="2417" chance="2960"/> -- Battle Hammer
+	<item id="2459" chance="2060"/> -- Iron Helmet
+	<item id="2513" chance="930"/> -- Battle Shield
+	<item id="7620" chance="790"/> -- Mana Potion
+	<item id="2194" chance="400"/> -- Mysterious Fetish
+	<item id="2178" chance="200"/> -- Mind Stone
+    <item id="2515" chance="400"/> -- Guardian Shield
+  </loot>
+</monster>

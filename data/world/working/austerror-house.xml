@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<houses>
+  <house name="Town Square 1" houseid="1" entryx="1086" entryy="1053" entryz="7" rent="1900" townid="3" size="19"/>
+  <house name="Town Square 2" houseid="2" entryx="1090" entryy="1058" entryz="7" rent="2600" townid="3" size="26"/>
+  <house name="Villa GM" houseid="3" entryx="1052" entryy="1007" entryz="7" rent="0" townid="4" size="48"/>
+  <house name="Town Square 3" houseid="4" entryx="1085" entryy="1039" entryz="7" rent="2100" townid="3" size="21"/>
+  <house name="Town Square 4" houseid="5" entryx="1077" entryy="1040" entryz="7" rent="1600" townid="3" size="16"/>
+  <house name="Town Square 5" houseid="6" entryx="1069" entryy="1047" entryz="7" rent="2200" townid="3" size="22"/>
+  <house name="Town Square 6" houseid="7" entryx="1064" entryy="1039" entryz="7" rent="3000" townid="3" size="30"/>
+  <house name="Town Square 7" houseid="8" entryx="1061" entryy="1047" entryz="7" rent="1000" townid="3" size="10"/>
+  <house name="Town Square 8" houseid="9" entryx="1054" entryy="1042" entryz="7" rent="1500" townid="3" size="15"/>
+  <house name="Town Square 9" houseid="10" entryx="1053" entryy="1052" entryz="7" rent="2200" townid="3" size="22"/>
+  <house name="terrain" houseid="11" entryx="1065" entryy="1070" entryz="7" rent="0" townid="4" size="557"/>
+  <house name="Town Square 10" houseid="12" entryx="1048" entryy="1028" entryz="7" rent="2400" townid="3" size="24"/>
+  <house name="Town Square 11" houseid="13" entryx="1044" entryy="1023" entryz="7" rent="3100" townid="3" size="31"/>
+  <house name="Town Square 12" houseid="14" entryx="1051" entryy="1024" entryz="7" rent="3200" townid="3" size="32"/>
+  <house name="Town Square 13" houseid="15" entryx="1062" entryy="1024" entryz="7" rent="3100" townid="3" size="31"/>
+  <house name="Southern Mannor I" houseid="16" entryx="1064" entryy="1091" entryz="7" rent="4400" townid="3" size="44"/>
+  <house name="Southern Mannor II" houseid="17" entryx="1072" entryy="1091" entryz="7" rent="4400" townid="3" size="44"/>
+  <house name="Southern Mannor III" houseid="18" entryx="1080" entryy="1091" entryz="7" rent="4400" townid="3" size="44"/>
+  <house name="Red Square 1" houseid="19" entryx="1077" entryy="1074" entryz="6" rent="3200" townid="3" size="28"/>
+  <house name="Red Square 2" houseid="20" entryx="1084" entryy="1074" entryz="6" rent="3200" townid="3" size="28"/>
+  <house name="Red Square 3" houseid="21" entryx="1084" entryy="1069" entryz="6" rent="3500" townid="3" size="29"/>
+</houses>

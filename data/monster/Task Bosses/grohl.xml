@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Grohl" nameDescription="Grohl" race="blood" experience="1200" speed="268" manacost="0">
+  <health now="2000" max="2000"/>
+  <look type="73" head="20" body="30" legs="40" feet="50" corpse="6080"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="85" attack="80" poison="10" />
+    <attack name="physical" interval="2000" chance="20" range="7" min="-150" max="-240">
+      <attribute key="shootEffect" value="arrow"/>
+    </attack>
+    <attack name="fire" interval="3000" chance="15" length="8" spread="3" min="-130" max="-220">
+      <attribute key="areaEffect" value="firearea"/>
+    </attack>
+  </attacks>
+  <defenses armor="30" defense="20">
+    <defense name="healing" interval="1000" chance="10" min="200" max="350">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+<elements>
+	<element firePercent="30"/>
+	<element physicalPercent="25"/>
+	<element holyPercent="25"/>
+	<element deathPercent="-20"/>
+	<element earthPercent="50"/>
+	<element energyPercent="25"/>
+	<element icePercent="15"/>
+</elements>
+  <immunities>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="I've got another confession to make!"/>
+    <voice sentence="CHOKE!."/>
+    <voice sentence="Is someone getting the best of you?"/>
+    <voice sentence="I will sing a tune at your grave."/>
+  </voices>
+  <loot>
+	<item id="2148" countmax="100" chance="58940" /> -- GP
+	<item id="5911" chance="15000" /> -- Red PoC
+	<item id="2391" chance="15000" /> -- War Hammer
+	<item id="7591" chance="25000" /> -- GHP
+	<item id="2392" chance="15000" /> -- Fire Sword
+	<item id="2488" chance="15000" /> -- Crown Legs
+	<item id="2487" chance="15000" /> -- Crown Armor
+	<item id="2491" chance="15000" /> -- Crown Helmet
+	<item id="2164" chance="15000" /> -- Might Ring
+	<item id="2519" chance="15000" /> -- Crown Shield
+    <item id="2114" chance="15000" /> -- Piggy Bank
+  </loot>
+</monster>

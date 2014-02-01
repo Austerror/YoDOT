@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Deepling Master Librarian" nameDescription="a deepling master librarian" race="blood" experience="1900" speed="210" manacost="0">
+	<health now="1700" max="1700"/>
+	<look type="443" corpse="15211"/>
+	<targetchange interval="3000" chance="5"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="95"/>
+		<flag runonhealth="30"/>
+	</flags>
+	<attacks>
+		<attack name="physical" range="1" interval="2000" min="-1" max="-180"/>
+		<attack name="ice" interval="2000" chance="14" length="8" spread="3" min="-150" max="-400">
+		  <attribute key="areaEffect" value="ICEATTACK"/>
+		</attack>
+		<attack name="manadrain" interval="2000" chance="15" range="7" target="1" min="-90" max="-180">
+			<attribute key="areaEffect" value="STONES"/>
+		</attack>
+		<attack name="lifedrain" interval="2000" chance="15" range="7" target="1" min="-50" max="-120">
+			<attribute key="areaEffect" value="STONES"/>
+		</attack>
+		<attack name="drown" interval="2000" chance="15" range="7" target="1" radius="3" min="-80" max="-190">
+			<attribute key="areaEffect" value="WATERSPLASH"/>
+		</attack>
+		<attack name="spellsinger skills" interval="2000">
+		</attack>
+	</attacks>
+	<defenses armor="45" defense="40">
+	</defenses>
+	<elements>
+		<element energyPercent="20"/>
+		<element earthPercent="20"/>
+	</elements>
+	<immunities>
+		<immunity fire="1"/>
+		<immunity ice="1"/>
+		<immunity drown="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Jey Obu giotja!!"/>
+		<voice sentence="Mmmmmoooaaaaaahaaa!!"/>
+	</voices>
+	<loot>
+		<item id="2152" countmax="3" chance="90500" /> <!-- Platinum Coin -->
+		<item id="2148" countmax="100" chance="100000" /> <!-- Gold Coin -->
+		<item id="15421" chance="25360" /> <!-- Spellsinger's Seal -->
+		<item id="15488" chance="20520" /> <!-- Deepling Filet -->
+		<item id="15422" chance="19620" /> <!-- Key To The Drowned Library -->
+		<item id="2667" countmax="2" chance="9770" /> <!-- fish -->
+		<item id="2146" countmax="3" chance="8600" /> <!-- Small Sapphire -->
+		<item id="13870" chance="9320" /> <!-- Eye of a Deepling -->
+		<item id="2168" chance="3670" /> <!-- Life Ring -->
+		<item id="15400" chance="3050" /> <!-- Deepling Staff -->
+		<item id="15403" chance="1340" /> <!-- Necklace Of The Deep -->
+		<item id="15644" chance="450" /> <!-- Ornate Crossbow -->
+	</loot>
+</monster>

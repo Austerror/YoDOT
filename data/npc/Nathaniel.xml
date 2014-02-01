@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<npc name="Nathaniel" script="data/npc/scripts/nathaniel.lua" walkinterval="0" direction="3">
+  <health now="200" max="200" />
+  <look type="153" head="116" body="123" legs="123" feet="40" addons="3"/>
+   <flags>
+    <flag pushable="0"/>
+  </flags>
+  <parameters>
+    <parameter key="message_greet" value="Hello |PLAYERNAME|." />
+	<parameter key="message_farewell" value="Have a nice day." />
+	<parameter key="module_keywords" value="1" />
+	<parameter key="keywords" value="job;" />
+	<parameter key="keyword_reply1" value="I care for the sick here, administering {medicine} whenever it is available. I used to be a carpenter but this is more rewarding." />
+  </parameters>
+</npc>

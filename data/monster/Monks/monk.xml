@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="monk" nameDescription="a monk" race="blood" experience="200" speed="220" manacost="600">
+  <health now="240" max="240"/>
+  <look type="57" head="20" body="30" legs="40" feet="50" corpse="6080"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" min="-40" max="-140"/>
+  </attacks>
+  <defenses armor="20" defense="22">
+    <defense name="healing" interval="1000" chance="17" min="30" max="50">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense name="speed" interval="1000" chance="10" speedchange="300" duration="3000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+  </defenses>
+  <elements>
+  <element deathPercent="50"/>
+  </elements>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="0"/>
+    <immunity lifedrain="0"/>
+    <immunity paralyze="0"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="Repent heretic!, Feel my kick!. A prayer for Zathroth"/>
+    <voice sentence="A prayer to the almighty one!"/>
+<voice sentence="I will punish the sinners!"/>
+  </voices>
+  <loot>
+	<item id="2689" chance="20730" /> -- Bread
+    <item id="2148" countmax="20" chance="15520" /> -- GP
+	<item id="10563" chance="5360"/> -- Book of Prayers
+	<item id="12448" chance="3170"/> -- Rope Belt
+	<item id="2193" chance="2490"/> -- Ankh
+    <item id="1949" chance="2150"/> -- Scroll
+	<item id="2642" chance="790"/> -- Sandals
+	<item id="2177" chance="790"/> -- Life Crystal
+	<item id="2044" chance="760"/> -- Lamp
+	<item id="12449" chance="720"/> -- Safety Pin
+	<item id="2015" chance="680"/> -- Brown Flask
+	<item id="2401" chance="490"/> -- Staff
+	<item id="2166" chance="80"/> -- Power Ring
+  </loot>
+</monster>

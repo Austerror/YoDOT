@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This raid was made by: OT RaidMaker v1.4-->
+<raid>
+  <!--Announcements-->
+  <announce delay="1000" type="Event" message="A strange humming sound can be heard under the ground in Thane!" />
+  <!--Single Spawns-->
+  <!--Area Spawns-->
+  <announce delay="30000" type="Event" message="Swamp Trolls have erupted through the ground into Thane!" />
+  <areaspawn delay="30000" fromx="1042" fromy="1023" fromz="7" tox="1096" toy="1098" toz="7">
+    <monster name="swamp troll" amount="5" />
+  </areaspawn>
+</raid>

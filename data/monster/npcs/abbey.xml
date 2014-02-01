@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <monster name="Abbey" nameDescription="Abbey" race="blood" experience="1195" speed="0" manacost="0">
+	<health now="2800" max="2800"/>
+	<look type="139" head="20" body="39" legs="45" feet="7" addons="0" corpse="6080"/>
+
+	<flags>
+	  <flag summonable="0"/>
+	  <flag attackable="0"/>
+	  <flag hostile="0"/>
+	  <flag illusionable="0"/>
+	  <flag convinceable="0"/>
+	  <flag pushable="0"/>
+	  <flag canpushitems="0"/>
+	  <flag staticattack="0"/>
+	  <flag targetdistance="0"/>
+	  <flag runonhealth="0"/>
+	</flags>
+  <voices interval="5000" chance="15">
+    <voice sentence="Hey you, free me from these chains on the wall please."/>
+    <voice sentence="If only somebody would free me from these chains!"/>
+  </voices>
+  </monster>
+

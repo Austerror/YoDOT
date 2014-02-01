@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Marsh Stalker" nameDescription="a marsh stalker" race="blood" experience="50" speed="" manacost="0">
+	<health now="100" max="100"/>
+	<look type="530" corpse=""/>
+	<targetchange interval="3000" chance="5"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag staticattack="95"/>
+		<flag lightlevel="0"/>
+		<flag lightcolor="0"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+	</attacks>
+	<defenses armor="" defense="">
+	</defenses>
+	<elements>
+		<element icePercent=""/>
+		<element firePercent=""/>
+		<element earthPercent=""/>
+		<element holyPercent=""/>
+		<element energyPercent=""/>
+		<element deathPercent=""/>
+	</elements>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="2000" chance="5">
+		<voice sentence=""/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="23" chance="64300" /> <!-- Gold Coin -->
+<item id="2666" chance="20620" /> <!-- Meat -->
+<item id="3976" countmax="2" chance="13020" /> <!-- Worm -->
+<item id="19742" chance="9920" /> <!-- Marsh Stalker Feather -->
+<item id="2397" chance="7600" /> <!-- Longsword -->
+<item id="19741" chance="6960" /> <!-- Marsh Stalker Beak -->
+<item id="8723" chance="4510" /> <!-- Rope -->
+<item id="7732" chance="260" /> <!-- Seeds -->
+	</loot>
+</monster>

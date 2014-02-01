@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raid>
+	<announce delay="1000" type="Event" message="Blub!" />
+	<singlespawn delay="60000" name="Tanjis" ref="yes" x="1004" y="1237" z="11"/>
+</raid>

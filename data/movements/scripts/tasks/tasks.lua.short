@@ -1,0 +1,244 @@
+function onStepIn(cid, item, position, lastPosition, fromPosition, toPosition, actor)
+
+	bossTaskStep = getPlayerStorageValue(cid,2380) -- 0 - Not on boss, 1 - On Boss, 2 - Boss Killed.
+	whichBoss = getPlayerStorageValue(cid,2381) -- Which Boss (1=rot,2=troll,3=ape,4=dragon,5=mino,6=mutant,7=DL,8=hero,9=hydra)
+	lumpTimerSV = getGlobalStorageValue(2391)
+	glorgorTimerSV = getGlobalStorageValue(2392)
+	scatTimerSV = getGlobalStorageValue(2393)
+	puffTimerSV = getGlobalStorageValue(2394)
+	udderTimerSV = getGlobalStorageValue(2395)
+	esmerTimerSV = getGlobalStorageValue(2396)
+	barneyTimerSV = getGlobalStorageValue(2397)
+	grohlTimerSV = getGlobalStorageValue(2398)
+	manyTimerSV = getGlobalStorageValue(2399)
+	-- bosses legend: [portal aid] = {boss number, boss name, teleport in, teleport out, boss spawn, timer SV}
+	bosses = {
+		[2382] = {1, "Lump", {x = 1060, y = 1048, z = 9}, {x = 1073, y = 1049, z = 9}, {x = 1062, y = 1051, z = 9},2391},
+		[2383] = {2, "Glorgor", {x = 1081, y = 1050, z = 8}, {x = 1092, y = 1047, z = 8}, {x = 1080, y = 1045, z = 8},2392},
+		[2384] = {3, "Scat Fu", {x = 1145, y = 1064, z = 8}, {x = 1156, y = 1064, z = 8}, {x = 1140, y = 1065, z = 8},2393},
+		[2385] = {4, "Puff", {x = 1050, y = 1104, z = 5}, {x = 1045, y = 1107, z = 4}, {x = 1052, y = 1107, z = 5}, 2394},
+		[2386] = {5, "Udder", {x = 1108, y = 1053, z = 7}, {x = 1119, y = 1064, z = 7}, {x = 1111, y = 1057, z = 7}, 2395},
+		[2387] = {6, "Esmeralda", {x = 1047, y = 1093, z = 7}, {x = 1047, y = 1092, z = 6}, {x = 1047, y = 1098, z = 7}, 2396},
+		[2388] = {7, "Barney", {x = 1062, y = 1131, z = 6}, {x = 1057, y = 1117, z = 5}, {x = 1054, y = 1130, z = 6}, 2397},
+		[2389] = {8, "Grohl", {x = 1098, y = 1139, z = 4}, {x = 1117, y = 1137, z = 5}, {x = 1095, y = 1144, z = 4}, 2398},
+		[2390] = {9, "The Many", {x = 1191, y = 1020, z = 7}, {x = 1183, y = 1026, z = 6}, {x = 1192, y = 1025, z = 7}, 2399}
+		}
+		
+
+	if(lastPosition.x == 0) then -- player just logged in
+		lastPosition = getTownTemplePosition(getPlayerTown(cid))
+		doSendMagicEffect(lastPosition, CONST_ME_TELEPORT)
+	end
+-- Portals In --
+	if bossTaskStep == 1 and whichBoss == bosses[item.itemid][1] then
+		bossNumber = bosses[item.itemid][1]
+		bossName = bosses[item.itemid][2]
+		bossIn = bosses[item.itemid][3]
+		bossOut = bosses[item.itemid][4]
+		bossSpawn = bosses[item.itemid][5]
+		bossTimerSV = bosses[item.itemid][6]
+		bossHere = bossName .. 'sHere'
+		
+		if (bossName .. TimerSV) <= os.time()-(60*10) then
+			bossHere = getCreatureByName(bossName)
+			if string.lower(bossName) .. 'sHere' ~= false and isMonster(string.lower(bossName) .. 'sHere') == true then
+				doRemoveCreature(string.lower(bossName) .. 'sHere')
+			end
+			doTeleportThing(cid, bossIn)
+			setPlayerStorageValue(cid,2401,1) -- is in boss room
+			combatant = cid
+			setGlobalStorageValue(bossTimerSV,os.time())
+			addEvent(string.lower(bossName) .. Timer, 60000, {combatant = cid})
+			doSummonCreature(bossName, bossSpawn)
+		else
+			doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "There is already somebody in there.")
+			doTeleportThing(cid, lastPosition, true)
+		end
+	-- Else, Step Back
+	elseif item.actionid ~= 2400 then
+		doTeleportThing(cid, lastPosition, true)
+	end
+	
+-- Portals Out --
+	if whichBoss == bosses[item.itemid][1] and item.actionid == 2400 then
+		bossNumber = bosses[item.itemid][1]
+		bossName = bosses[item.itemid][2]
+		bossIn = bosses[item.itemid][3]
+		bossOut = bosses[item.itemid][4]
+		bossSpawn = bosses[item.itemid][5]
+		bossTimerSV = bosses[item.itemid][6]
+		string.lower(bossName) .. 'sHere' = getCreatureByName(bossName)
+		if string.lower(bossName) .. 'sHere' ~= false and isMonster(string.lower(bossName) .. 'sHere') == true then
+			doRemoveCreature(string.lower(bossName) .. 'sHere')
+		end
+		setPlayerStorageValue(cid,2401,-1)
+		setGlobalStorageValue(bosTimerSV,-1)
+		stopEvent(string.lower(bossName) .. timer)
+		doTeleportThing(cid, bossOut)
+	end
+	return true
+end
+		
+-- Boss Timers --
+function lumpTimer(parameters)
+	playerCid = parameters.combatant
+	if bossTaskStep >= 1 then -- Player is on boss, may have killed it, who cares.
+		combatantPos = getCreaturePosition(playerCid)
+		if playerCid == playerCid then
+			if combatantPos.x >= 1057 and combatantPos.x <= 1064 and combatantPos.y >= 1046 and combatantPos.y <= 1053 and combatantPos.y == 9 then -- Player is still in area
+				doTeleportThing(playerCid, rotwormBossOut) -- Remove Player from area
+				setPlayerStorageValue(playerCid,2401,-1)
+				doPlayerSendTextMessage(playerCid, MESSAGE_INFO_DESCR, "Your time is up.")
+			end
+		end
+		setGlobalStorageValue(2391,-1) -- Lump 10 min timer
+		lumpsHere = getCreatureByName("Lump")
+		if lumpsHere ~= false and isMonster(lumpsHere) == true then -- Lump is still spawned
+			doRemoveCreature(lumpsHere) -- Remove Lump from area
+		end
+	end
+end
+function glorgorTimer(parameters)
+	playerCid = parameters.combatant
+	if bossTaskStep >= 1 then -- Player is on boss, may have killed it, who cares.
+		if playerCid == playerCid then
+			combatantPos = getCreaturePosition(playerCid) 
+			if combatantPos.x >= 1077 and combatantPos.x <= 1084 and combatantPos.y >= 1044 and combatantPos.y <= 1051 and combatantPos.y == 8 then -- Player is still in area
+				doTeleportThing(playerCid, glorgorBossOut) -- Remove Player from area
+				setPlayerStorageValue(playerCid,2401,-1)
+				doPlayerSendTextMessage(playerCid, MESSAGE_INFO_DESCR, "Your time is up.")
+			end
+		end
+		setGlobalStorageValue(2392,-1) -- Glorgor 10 min timer
+		glorgorsHere = getCreatureByName("Glorgor")
+		if glorgorsHere ~= false and isMonster(glorgorsHere) == true then -- Lump is still spawned
+			doRemoveCreature(glorgorsHere) -- Remove Lump from area
+		end
+	end
+end
+function scatTimer(parameters)
+	playerCid = parameters.combatant
+	if bossTaskStep >= 1 then -- Player is on boss, may have killed it, who cares.
+		if playerCid == playerCid then
+			combatantPos = getCreaturePosition(playerCid)
+			if combatantPos.x >= 1138 and combatantPos.x <= 1146 and combatantPos.y >= 1060 and combatantPos.y <= 1069 and combatantPos.y == 8 then -- Player is still in area
+				doTeleportThing(playerCid, scatBossOut) -- Remove Player from area
+				setPlayerStorageValue(playerCid,2401,-1)
+				doPlayerSendTextMessage(playerCid, MESSAGE_INFO_DESCR, "Your time is up.")
+			end
+		end
+		setGlobalStorageValue(2393,-1) -- Scat 10 min timer
+		scatsHere = getCreatureByName("Scat Fu")
+		if scatsHere ~= false and isMonster(scatsHere) == true then -- Scat Fu is still spawned
+			doRemoveCreature(scatsHere) -- Remove Scat Fu from area
+		end
+	end
+end
+function puffTimer(parameters)
+	playerCid = parameters.combatant
+	if bossTaskStep >= 1 then -- Player is on boss, may have killed it, who cares.
+		if playerCid == playerCid then
+			combatantPos = getCreaturePosition(playerCid)
+			if combatantPos.x >= 1046 and combatantPos.x <= 1054 and combatantPos.y >= 1103 and combatantPos.y <= 1108 and combatantPos.y == 5 then -- Player is still in area
+				doTeleportThing(playerCid, puffBossOut) -- Remove Player from area
+				setPlayerStorageValue(playerCid,2401,-1)
+				doPlayerSendTextMessage(playerCid, MESSAGE_INFO_DESCR, "Your time is up.")
+			end
+		end
+		setGlobalStorageValue(2394,-1) -- Puff 10 min timer
+		puffsHere = getCreatureByName("Puff")
+		if puffsHere ~= false and isMonster(puffsHere) == true then -- Puff is still spawned
+			doRemoveCreature(puffsHere) -- Remove Puff from area
+		end
+	end
+end
+function udderTimer(parameters)
+	playerCid = parameters.combatant
+	if bossTaskStep >= 1 then -- Player is on boss, may have killed it, who cares.
+		if playerCid == playerCid then
+			combatantPos = getCreaturePosition(playerCid)
+			if combatantPos.x >= 1107 and combatantPos.x <= 1113 and combatantPos.y >= 1053 and combatantPos.y <= 1058 and combatantPos.y == 7 then -- Player is still in area
+				doTeleportThing(playerCid, udderBossOut) -- Remove Player from area
+				setPlayerStorageValue(playerCid,2401,-1)
+				doPlayerSendTextMessage(playerCid, MESSAGE_INFO_DESCR, "Your time is up.")
+			end
+		end
+		setGlobalStorageValue(2395,-1) -- Udder 10 min timer
+		uddersHere = getCreatureByName("Udder")
+		if uddersHere ~= false and isMonster(uddersHere) == true then -- Udder is still spawned
+			doRemoveCreature(uddersHere) -- Remove Udder from area
+		end
+	end
+end
+function esmerTimer(parameters)
+	playerCid = parameters.combatant
+	if bossTaskStep >= 1 then -- Player is on boss, may have killed it, who cares.
+		if playerCid == playerCid then
+			combatantPos = getCreaturePosition(playerCid)
+			if combatantPos.x >= 1043 and combatantPos.x <= 1049 and combatantPos.y >= 1092 and combatantPos.y <= 1101 and combatantPos.y == 7 then -- Player is still in area
+				doTeleportThing(playerCid, esmerBossOut) -- Remove Player from area
+				setPlayerStorageValue(playerCid,2401,-1)
+				doPlayerSendTextMessage(playerCid, MESSAGE_INFO_DESCR, "Your time is up.")
+			end
+		end
+		setGlobalStorageValue(2396,-1) -- Esmeralda 10 min timer
+		esmersHere = getCreatureByName("Esmeralda")
+		if esmersHere ~= false and isMonster(esmersHere) == true then -- Esmeralda is still spawned
+			doRemoveCreature(esmersHere) -- Remove Esmeralda from area
+		end
+	end
+end
+function barneyTimer(parameters)
+	playerCid = parameters.combatant
+	if bossTaskStep >= 1 then -- Player is on boss, may have killed it, who cares.
+		if playerCid == playerCid then
+			combatantPos = getCreaturePosition(playerCid)
+			if combatantPos.x >= 1050 and combatantPos.x <= 1063 and combatantPos.y >= 1125 and combatantPos.y <= 1135 and combatantPos.y == 6 then -- Player is still in area
+				doTeleportThing(playerCid, barneyBossOut) -- Remove Player from area
+				setPlayerStorageValue(playerCid,2401,-1)
+				doPlayerSendTextMessage(playerCid, MESSAGE_INFO_DESCR, "Your time is up.")
+			end
+		end
+		setGlobalStorageValue(2397,-1) -- Barney 10 min timer
+		barneysHere = getCreatureByName("Barney")
+		if barneysHere ~= false and isMonster(barneysHere) == true then -- Barney is still spawned
+			doRemoveCreature(barneysHere) -- Remove Barney from area
+		end
+	end
+end
+function grohlTimer(parameters)
+	playerCid = parameters.combatant
+	if bossTaskStep >= 1 then -- Player is on boss, may have killed it, who cares.
+		if playerCid == playerCid then
+			combatantPos = getCreaturePosition(playerCid)
+			if combatantPos.x >= 1094 and combatantPos.x <= 1099 and combatantPos.y >= 1139 and combatantPos.y <= 1145 and combatantPos.y == 4 then -- Player is still in area
+				doTeleportThing(playerCid, grohlBossOut) -- Remove Player from area
+				setPlayerStorageValue(playerCid,2401,-1)
+				doPlayerSendTextMessage(playerCid, MESSAGE_INFO_DESCR, "Your time is up.")
+			end
+		end
+		setGlobalStorageValue(2398,-1) -- Grohl 10 min timer
+		grohlsHere = getCreatureByName("Grohl")
+		if grohlsHere ~= false and isMonster(grohlsHere) == true then -- Grohl is still spawned
+			doRemoveCreature(grohlsHere) -- Remove Grohl from area
+		end
+	end
+end
+function manyTimer(parameters)
+	playerCid = parameters.combatant
+	if bossTaskStep >= 1 then -- Player is on boss, may have killed it, who cares.
+		if playerCid == playerCid then
+			combatantPos = getCreaturePosition(playerCid)
+			if combatantPos.x >= 1187 and combatantPos.x <= 1196 and combatantPos.y >= 1019 and combatantPos.y <= 1027 and combatantPos.y == 7 then -- Player is still in area
+				doTeleportThing(playerCid, manyBossOut) -- Remove Player from area
+				setPlayerStorageValue(playerCid,2401,-1)
+				doPlayerSendTextMessage(playerCid, MESSAGE_INFO_DESCR, "Your time is up.")
+			end
+		end
+		setGlobalStorageValue(2399,-1) -- The Many 10 min timer
+		manysHere = getCreatureByName("The Many")
+		if manysHere ~= false and isMonster(manysHere) == true then -- The Many is still spawned
+			doRemoveCreature(manysHere) -- Remove The Many from area
+		end
+	end
+end

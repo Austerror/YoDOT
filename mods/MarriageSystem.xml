@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<mod name="MarriageSystem" version="1.0" author="Vodkart" contact="xtibia.com" enabled="yes">  
+<config name="marry_func"><![CDATA[
+ 
+marry_config = {
+OnlyDifferentSex = false,
+Marry_Price = 100000,
+Divorce_Price = 50000,
+Level = 50,
+MaxSqm = 7, -- to marry
+Text = {'I love you!','My love!','Baby dear!'},
+RingID = 10502,
+TimeAccept = 60,
+storage1 = 300235,
+storage2 = 300236,
+storage3 = 300237
+}
+ 
+function isMarried(cid)
+local m = db.getResult("SELECT `player_id` FROM `marriage_system` WHERE `player_id` = '"..getPlayerGUID(cid).."';")
+if(m:getID() == -1) then
+local e = db.getResult("SELECT `partner` FROM `marriage_system` WHERE `partner` = '"..getPlayerGUID(cid).."';")
+if(e:getID() == -1) then
+return false
+end
+end
+return true
+end
+function isPatner(cid)
+local p = db.getResult("SELECT `partner` FROM `marriage_system` WHERE `player_id` = '"..getPlayerGUID(cid).."';")
+if(p:getID() == -1) then
+return true
+end
+return false
+end
+function Ponline(player)
+local rows = db.getResult("SELECT `online` FROM `players` WHERE `id` = " .. player .. ";")
+local on = rows:getDataInt("online")
+if on ~= 0 then
+return TRUE
+else
+return FALSE
+end
+end
+function getPartner(cid)
+if isPatner(cid) then
+a = db.getResult("SELECT `player_id` FROM `marriage_system` WHERE `partner` = '"..getPlayerGUID(cid).."';")
+b = "player_id"
+else
+a = db.getResult("SELECT `partner` FROM `marriage_system` WHERE `player_id` = '"..getPlayerGUID(cid).."';")
+b = "partner"
+end
+local query = a
+return getPlayerNameByGUID(query:getDataString(b))
+end
+function doMarry(cid, patner)
+return db.executeQuery("INSERT INTO `marriage_system` (`player_id`, `partner`, `marriage_date`) VALUES ('".. getPlayerGUID(cid) .."', '"..patner.."', '".. os.time() .."');")
+end
+function doDivorcePlayer(cid)
+if isPatner(cid) then
+pid,player = getPlayerGUIDByName(getPartner(cid)),getPlayerByNameWildcard(getPartner(cid))
+else
+pid,player = getPlayerGUID(cid),cid
+end
+return db.executeQuery("DELETE FROM `marriage_system` WHERE `player_id` = '" .. pid .. "';")
+end
+function getMarryDate(cid)
+local player = isPatner(cid) and getPlayerGUIDByName(getPartner(cid)) or getPlayerGUID(cid)
+local date = db.getResult("SELECT `marriage_date` FROM `marriage_system` WHERE `player_id` = '"..player.."';")
+return os.date("%d %B %Y %X ", date:getDataInt("marriage_date"))
+end
+]]></config>
+<talkaction words="/marriage;!marriage" event="buffer"><![CDATA[
+domodlib('marry_func')
+param = string.lower(param)
+if (param == "") then
+doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE,"invalid command, for more information enter !marriage info")
+elseif(param == "info") then
+doShowTextDialog(cid,2160,"Marriage Info:\n\nLevel Minimum: "..marry_config.Level.."\nMarriage Cost: "..marry_config.Marry_Price.."\nDivorce Cost: "..marry_config.Divorce_Price.."\n\nMarried Players have a special buffs as a wedding gift given by the union\n\nThis bonus is only given if the married players are nearby.")
+elseif(param == "status") then
+doPlayerPopupFYI(cid,""..(isMarried(cid) and "Marriage Status".."\n\nMarried with: ["..getPartner(cid).."]\n\nThe date of his marriage was: "..getMarryDate(cid).."" or "you are not married").."")
+end
+return true
+]]></talkaction>
+<event type="login" name="MarryRegister" event="script"><![CDATA[
+function onLogin(cid)
+registerCreatureEvent(cid, "MarryLook")
+registerCreatureEvent(cid, "MarryNoAttack")
+        return true
+        end]]></event>    
+<event type="look" name="MarryLook" event="script"><![CDATA[
+domodlib('marry_func')
+function onLook(cid, thing, position, lookDistance)
+if isPlayer(thing.uid) and isMarried(thing.uid) then
+doPlayerSetSpecialDescription(thing.uid,'.\n'..(getPlayerSex(thing.uid) == 0 and 'She' or 'He')..' is married to '..getPartner(thing.uid))
+end                     
+return true
+end]]></event>
+<event type="combat" name="MarryNoAttack" event="script"><![CDATA[
+domodlib('marry_func')
+if isPlayer(cid) and isPlayer(target) and isMarried(cid) and isMarried(target) then
+if (getCreatureName(target) ==  getPartner(cid))then
+doPlayerSendCancel(cid, "You may not attack this player.")
+return false
+end
+end
+return true
+]]></event>
+</mod>

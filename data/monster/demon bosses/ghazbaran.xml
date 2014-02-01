@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Ghazbaran" nameDescription="Ghazbaran" race="fire" experience="15000" speed="415" manacost="0">
+	<health now="70000" max="70000"/>
+	<look type="12" head="0" body="123" legs="97" feet="94" corpse="6068"/>
+	<targetchange interval="10000" chance="15"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag staticattack="90"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="230" attack="235"/>
+		<attack name="manadrain" interval="4000" chance="25" radius="8" target="0" min="-600" max="-1100">
+			<attribute key="areaEffect" value="bluebubble"/>
+		</attack>
+		<attack name="physical" interval="20000" chance="100" target="0" radius="5" min="-300" max="-530">
+			<attribute key="areaEffect" value="teleport"/>
+		</attack>
+		<attack name="physical" interval="2000" chance="8" range="2" target="1" min="-1650" max="-2075">
+			<attribute key="shootEffect" value="whirlwindsword"/>
+		</attack>
+		<attack name="death" interval="3000" chance="20" length="8" spread="0" min="-250" max="-600">
+			<attribute key="areaEffect" value="mortarea"/>
+		</attack>
+		<attack name="ice" interval="3000" chance="18" radius="6" target="0" min="-660" max="-780">
+			<attribute key="areaEffect" value="bigplants"/>
+		</attack>
+	</attacks>
+	<defenses armor="70" defense="65">
+		<defense name="healing" interval="3000" chance="15" min="3000" max="5500">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="speed" interval="4000" chance="15" speedchange="440" duration="6000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity physical="0"/>
+		<immunity energy="1"/>
+		<immunity earth="1"/>
+		<immunity ice="1"/>
+		<immunity fire="1"/>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+
+  	<summons maxSummons="4">
+		<summon name="deathslicer" interval="20000" chance="100"/>
+		<summon name="deathslicer" interval="20000" chance="100"/>
+		<summon name="deathslicer" interval="20000" chance="100"/>
+		<summon name="deathslicer" interval="20000" chance="100"/>
+	</summons>
+
+	<voices interval="5000" chance="30">
+		<voice sentence="COME AND GIVE ME SOME AMUSEMENT!" yell="1"/>
+		<voice sentence="IS THAT THE BEST YOU HAVE TO OFFER, TIBIANS?" yell="1"/>
+		<voice sentence="I AM GHAZBARAN OF THE TRIANGLE... AND I AM HERE TO CHALLENGE YOU ALL!" yell="1"/>
+		<voice sentence="FLAWLESS VICTORY!"/>
+	</voices>
+
+	<loot>
+		<item id="8904" chance="8000" /> -- spellscroll of prophecies
+		<item id="8918" chance="6500"/> --spellbook of dark mysteries
+		<item id="2165" chance="13000"/> --stealth ring
+		<item id="2470" chance="11000"/> --golden legs
+		<item id="2155" chance="8000" /> -- green gem
+		<item id="6500" countmax="5" chance1="35000"/> --demonic essence
+		<item id="2152" countmax="67" chance1="100000" /> -- platinum coins
+		<item id="2112" chance="8000"/> -- Teddy bear
+		<item id="1987" chance="100000" > -- bag
+			<inside>
+				<item id="7431" chance="5000" /> -- demonbone
+				<item id="7405" chance="4700"/> --havoc blade
+				<item id="2447" chance="3000"/> --twin axe
+				<item id="2421" chance="7509" /> -- thunder hammer
+				<item id="2514" chance="18000" /> -- mastermind shield
+				<item id="2143" countmax="15" chance1="13000"/> -- white pearls
+				<item id="2150" countmax="10" chance1="13000"/> --small amethyst
+				<item id="8878" chance="3500"/> -- crystalline armor
+				<item id="7433" chance="5000"/> -- Ravenwing
+				<item id="8884" chance="9000" /> -- oceanborn levaiathan armor
+			</inside>
+		</item>
+	</loot>
+</monster>

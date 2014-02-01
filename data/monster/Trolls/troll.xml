@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Troll" nameDescription="a troll" race="blood" experience="20" speed="126" manacost="290">
+  <health now="50" max="50"/>
+  <look type="15" head="20" body="30" legs="40" feet="50" corpse="5960"/>
+  <targetchange interval="2000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="15"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="1500" skill="15" attack="10"/>
+  </attacks>
+  <defenses armor="4" defense="5"/>
+  	<elements>
+		<element energyPercent="20"/>
+		<element earthPercent="-13"/>
+		<element holyPercent="10"/>
+		<element deathPercent="-7"/>
+	</elements>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="0"/>
+    <immunity lifedrain="0"/>
+    <immunity paralyze="0"/>
+    <immunity outfit="0"/>
+    <immunity drunk="0"/>
+    <immunity invisible="0"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="Grrr"/>
+    <voice sentence="Groar"/>
+    <voice sentence="Gruntz!"/>
+    <voice sentence="Hmmm, bugs."/>
+    <voice sentence="Hmmm, dogs."/>
+  </voices>
+  <loot>
+	<item id="2148" countmax="12" chance="65070" /> -- GP
+	<item id="2380" chance="18420"/> -- Hand Axe
+	<item id="2666" chance="15210" /> -- Meat	<item id="2389" chance="13360" /> -- Spear
+	<item id="2461" chance="11920"/> -- Leather Helmet
+	<item id="2643" chance="10420"/> -- Leather Boots
+	<item id="2120" chance="7970"/> -- Rope
+	<item id="2448" chance="5350"/> -- Studded Club
+	<item id="2512" chance="4670"/> -- Wooden Shield
+	<item id="10606" chance="970"/> -- Bunch of Troll Hair
+	<item id="2170" chance="70"/> -- Silver Amulet
+  </loot>
+</monster>

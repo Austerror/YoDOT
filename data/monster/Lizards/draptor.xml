@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Draptor" nameDescription="a draptor" race="blood" experience="2400" speed="260" manacost="0">
+<health now="5550" max="5550"/>
+<look type="382" corpse="13316"/>
+<targetchange interval="5000" chance="10"/>
+<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="85" attack="65"/>
+		<attack name="energy" interval="2000" chance="15" range="7" target="1" min="-200" max="-300">
+			<attribute key="shootEffect" value="energy"/>
+		</attack>
+		<attack name="lifedrain" interval="2000" chance="16" radius="2" min="-130" max="-300">
+			<attribute key="areaEffect" value="yellowspark"/>
+		</attack>
+		<attack name="fire" interval="2000" chance="30" length="4" spread="3" max="-320">
+			<attribute key="shootEffect" value="fire"/>
+		</attack>
+	</attacks>
+	<defenses armor="16" defense="19">
+		<defense name="healing" interval="2000" chance="15" min="510" max="600">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element physicalPercent="1"/>
+		<element firePercent="-1"/>
+		<element deathPercent="1"/>
+	</elements>
+	<immunities>
+		<immunity energy="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<loot>
+		<item id="2148" countmax="225" chance="95650" /><!-- gold coin -->
+		<item id="7588" chance="55000"/> -- Strong Health Potion
+		<item id="7589" chance="55000"/> -- Strong Mana Potion
+		<item id="13296" chance="40000" /><!-- draptor scales -->
+		<item id="8867" chance="120" /><!-- Dragon Robe -->
+	</loot>
+</monster>

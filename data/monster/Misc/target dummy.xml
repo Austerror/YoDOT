@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <monster name="Target Dummy" nameDescription="a target dummy" race="undead" experience="0" speed="0" manacost="0">
+    <health now="1470000" max="1470000"/>
+    <look typeex="5787" corpse="0"/>
+    <targetchange interval="60000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+      <flag summonable="0"/>
+      <flag attackable="1"/>
+      <flag hostile="0"/>
+      <flag illusionable="0"/>
+      <flag convinceable="0"/>
+      <flag pushable="0"/>
+      <flag canpushitems="0"/>
+      <flag staticattack="15"/>
+      <flag lightlevel="0"/>
+      <flag lightcolor="0"/>
+      <flag targetdistance="0"/>
+      <flag runonhealth="0"/>
+    </flags>
+
+	<defenses armor="1" defense="1">
+		<defense name="healing" interval="20" chance="20" min="2250" max="2750">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+    <voices interval="2000" chance="5">
+      <voice sentence="Crackle!"/>
+      <voice sentence="Snap!"/>
+	  <voice sentence="Pop!"/>
+    </voices>
+ </monster>
+  

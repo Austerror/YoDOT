@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raid>
+	<singlespawn delay="100" name="Midnight Panther" ref="yes" x="1116" y="996" z="7"/>
+</raid>

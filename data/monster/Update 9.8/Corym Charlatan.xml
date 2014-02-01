@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Corym Charlatan" nameDescription="a corym charlatan" race="blood" experience="150" speed="180" manacost="0">
+	<health now="250" max="250"/>
+	<look type="532" head="76" body="76" legs="76" feet="76" corpse="19725"/>
+	<targetchange interval="3000" chance="5"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag staticattack="95"/>
+		<flag lightlevel="0"/>
+		<flag lightcolor="0"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="physical" range="1" interval="2000" min="-1" max="-100"/>
+	</attacks>
+	<defenses armor="18" defense="18">
+	</defenses>
+	<elements>
+		<element deathPercent="-20"/>
+		<element energyPercent="-25"/>
+		<element earthPercent="-20"/>
+		
+		<element holyPercent="20"/>
+	</elements>
+	<immunities>
+
+	</immunities>
+	<voices interval="2000" chance="5">
+		<voice sentence="Mehehe!" />
+		<voice sentence="Beware! Me hexing you!" />
+	</voices>
+	<loot>
+		<item id="2148" countmax="35" chance="89740" /> <!-- Gold Coin -->
+		<item id="20101" chance="14730" /> <!-- Rat Cheese -->
+		<item id="20100" chance="12710" /> <!-- Soft Cheese -->
+		<item id="8368" chance="9980" /> <!-- Cheese -->
+		<item id="20089" chance="8200" /> <!-- Bola -->
+		<item id="20099" chance="6960" /> <!-- Earflap -->
+		<item id="20097" chance="5920" /> <!-- Cheese Cutter -->
+		<item id="20092" chance="970" /> <!-- Ratana -->
+		<item id="20093" chance="910" /> <!-- Life Preserver -->
+		<item id="20126" chance="580" /> <!-- Leather Harness -->
+		<item id="20098" chance="490" /> <!-- Cheesy Figurine -->
+		<item id="20090" chance="480" /> <!-- Spike Shield -->
+	</loot>
+</monster>

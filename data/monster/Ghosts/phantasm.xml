@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="phantasm" nameDescription="a phantasm" race="undead" experience="4400" speed="280" manacost="0">
+	<health now="3950" max="3950"/>
+	<look type="241" head="20" corpse="6344"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="75" attack="70"/>
+		<attack name="earth" interval="2000" chance="10" range="7" radius="4" target="1" min="-150" max="-300">
+			<attribute key="shootEffect" value="poison"/>
+			<attribute key="areaEffect" value="poison"/>
+		</attack>
+		<attack name="poisonfield" interval="1000" chance="14" range="7" radius="3" target="1">
+			<attribute key="shootEffect" value="poison"/>
+		</attack>
+		<attack name="manadrain" interval="3000" chance="20" range="7" min="-100" max="-300">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</attack>
+	</attacks>
+	<defenses armor="0" defense="0">
+		<defense name="healing" interval="1000" chance="50" min="75" max="125">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+    <elements>
+		<element firePercent="-10"/>
+		<element earthPercent="50"/>
+		<element icePercent="15"/>
+		<element energyPercent="-5"/>
+		<element holyPercent="-15"/>
+	</elements>
+	<immunities>
+		<immunity physical="1"/>
+		<immunity death="1"/>
+		<immunity lifedrain="1"/>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Oh my, you forgot to put your pants on!"/>
+		<voice sentence="Weeheeheeheehee!"/>
+		<voice sentence="Its nothing but a dream!"/>
+		<voice sentence="Give in!"/>
+	</voices>
+	<summons maxSummons="4">
+		<summon name="Phantasm summon" interval="3000" chance="20"/>
+	</summons>
+	<loot>
+		<item id="2148" countmax="186" chance="17190"  /> -- gold coin
+		<item id="2804" chance="5760" /> -- shadow herb
+		<item id="2260" chance="4390" countmax="2" /> -- blank rune
+		<item id="6500" chance="2830" /> -- demonic essence
+		<item id="9810" chance="2050"/> -- Rusty armor (rare)
+		<item id="5944" chance="1660" /> -- soul orb
+		<item id="7590" chance="1270" /> -- GMP
+		<item id="2149" countmax="2" chance="880"  /> -- small emerald
+		<item id="2152" chance="390" /> -- platinum coin
+		<item id="2478" chance="290" /> -- crown armor
+		<item id="2165" chance="290" /> -- stealth ring
+		<item id="2230" chance="250" /> -- bone
+		<item id="7414" chance="220"/> -- Abyss Hammer
+		<item id="6300" chance="180"/> -- death ring
+	</loot>
+</monster>

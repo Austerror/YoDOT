@@ -1,0 +1,258 @@
+local keywordHandler = KeywordHandler:new()
+local npcHandler = NpcHandler:new(keywordHandler)
+NpcSystem.parseParameters(npcHandler)
+
+-- OTServ event handling functions start
+function onCreatureAppear(cid) 				npcHandler:onCreatureAppear(cid) 			end
+function onCreatureDisappear(cid) 			npcHandler:onCreatureDisappear(cid) 		end
+function onCreatureSay(cid, type, msg) 		npcHandler:onCreatureSay(cid, type, msg) 	end
+function onThink() 							npcHandler:onThink()						end
+-- OTServ event handling functions end
+
+local function doPromotion(cid)
+taskCount = getPlayerStorageValue(cid, 2202)
+if taskCount == 10 then
+	doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR,"Congratulations! You have completed 10 tasks and received a demon backpack as a reward.")
+	doPlayerAddItem(cid, 10518, 1) -- demon backpack
+	doSendMagicEffect(getCreaturePosition(cid), 12) -- Magic effect on player to denote successful quest
+elseif taskCount == 25 then
+	doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR,"Congratulations! You have completed 25 tasks and received a brown war horse mount as a reward.")
+	doPlayerAddMount(cid, 17) -- War horse Mount
+	doSendMagicEffect(getCreaturePosition(cid), 12) -- Magic effect on player to denote successful quest
+elseif taskCount == 50 then
+	doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR,"Congratulations! You have completed 50 tasks and received a fire war horse mount as a reward.")
+	doPlayerAddMount(cid, 23) -- Fire horse Mount
+	doSendMagicEffect(getCreaturePosition(cid), 12) -- Magic effect on player to denote successful quest
+end
+
+end
+
+function creatureSayCallback(cid, type, msg)
+	if(not npcHandler:isFocused(cid)) then
+		return false
+	end
+
+	taskNumber = getPlayerStorageValue(cid, 2200)
+	killNumber = getPlayerStorageValue(cid, 2201)
+	tasksCompleted = getPlayerStorageValue(cid, 2202)
+	taskTalkStep = getPlayerStorageValue(cid, 2203)
+
+	if msgcontains(msg, 'task') then
+		npcHandler:say('I am a task master with tasks for everyone. If you are interested you can {start} one if you like. You can {hand in} your current task if you have finished it or {abandon} it if you can not.', cid)
+	end
+	if msgcontains(msg, 'abandon') and taskNumber >= 1 then
+		npcHandler:say('Are you sure you want to abandon your current task?', cid)
+		setPlayerStorageValue(cid,2203,100) -- Confirmed they want to abandon task
+	elseif msgcontains(msg, 'start') and taskNumber <= 0 then
+		if tasksCompleted == -1 then
+			setPlayerStorageValue(cid,2202,0) -- Set tasks to 0 if 1st time.
+		end
+		if getPlayerLevel(cid) <= 20 then 
+			npcHandler:say('I have the following tasks available for you: {rotworms} or {trolls}.', cid)
+		elseif getPlayerLevel(cid) >= 21 and getPlayerLevel(cid) <= 50 then 
+			npcHandler:say('I have the following tasks available for you: {apes}, {minotaurs} or {dragons}.', cid)
+		elseif getPlayerLevel(cid) >= 51 and getPlayerLevel(cid) <= 80 then 
+			npcHandler:say('I have the following tasks available for you: {mutants} or {dragon lords}.', cid)
+		elseif getPlayerLevel(cid) >= 81 and getPlayerLevel(cid) <= 120 then 
+			npcHandler:say('I have the following tasks available for you: {heros} or {hydras}.', cid)
+		end
+	elseif msgcontains(msg, 'start') and taskNumber >= 1 then
+		npcHandler:say('You\'re already on a task, you can {hand in} if you have finished, or {abandon} if you can\'t.', cid)
+	elseif msgcontains(msg, 'hand in') and taskNumber >=1 then
+		npcHandler:say('Which task are you handing in?', cid)
+	elseif msgcontains(msg, 'hand in') and taskNumber <=0 then
+		npcHandler:say('You\'re not on a task, you have to {start} one.', cid)
+	elseif msgcontains(msg, 'rotworms') then
+		if taskNumber <= 0 and getPlayerLevel(cid) <= 20 then
+			npcHandler:say('Do you want to kill 100 rotworms for me?', cid)
+			setPlayerStorageValue(cid,2203,1) -- Asked if they will kill 100 rotworms
+		elseif taskNumber == 1 and killNumber <=99 then
+			npcHandler:say('You haven\'t killed 100 rotworms yet. Ask me about them again when you have.', cid)
+		elseif taskNumber == 1 and killNumber >=100 then
+			npcHandler:say('Nice work, here\'s your reward. You can {start} another task when you\'re ready.', cid)
+			doPlayerAddExp(cid,5000) -- give Exp
+			doPlayerSendTextMessage(cid, MESSAGE_EVENT_DEFAULT, "You earned 500 gold and 1500 experience.") -- Show Gold & Exp
+			doPlayerAddItem(cid, 2152, 5) -- Give 5 Platinum Coins
+			setPlayerStorageValue(cid,2200,0) -- Reset task number to 0
+			setPlayerStorageValue(cid,2201,0) -- Reset kills to 0
+			setPlayerStorageValue(cid,2202,(tasksCompleted + 1)) -- Add 1 to tasks completed
+			doPromotion(cid)
+		else
+			npcHandler:say('You\'re not on this task.', cid)
+		end
+	elseif msgcontains(msg, 'trolls') then
+		if taskNumber <= 0 and getPlayerLevel(cid) <= 20 then
+			npcHandler:say('Do you want to kill 100 trolls for me?', cid)
+			setPlayerStorageValue(cid,2203,2) -- Asked if they will kill 100 trolls
+		elseif taskNumber == 2 and killNumber <=99 then
+			npcHandler:say('You haven\'t killed 100 trolls yet. Ask me about them again when you have.', cid)
+		elseif taskNumber == 2 and killNumber >=100 then
+			npcHandler:say('Nice work, here\'s your reward. You can {start} another task when you\'re ready.', cid)
+			doPlayerAddExp(cid,5000) -- give Exp
+			doPlayerSendTextMessage(cid, MESSAGE_EVENT_DEFAULT, "You earned 500 gold and 1500 experience.") -- Show Gold & Exp
+			doPlayerAddItem(cid, 2152, 5) -- Give 5 Platinum Coins
+			setPlayerStorageValue(cid,2200,0) -- Reset task number to 0
+			setPlayerStorageValue(cid,2201,0) -- Reset kills to 0
+			setPlayerStorageValue(cid,2202,(tasksCompleted + 1)) -- Add 1 to tasks completed
+			doPromotion(cid)
+		else
+			npcHandler:say('You\'re not on this task.', cid)
+		end
+	elseif msgcontains(msg, 'dragons') then
+		if taskNumber <= 0 and (getPlayerLevel(cid) >= 21 and getPlayerLevel(cid) <= 50) then
+			npcHandler:say('Do you want to kill 100 dragons for me?', cid)
+			setPlayerStorageValue(cid,2203,3) -- Asked if they will kill 100 tarantulas
+		elseif taskNumber == 3 and killNumber <=99 then
+			npcHandler:say('You haven\'t killed 100 dragons yet. Ask me about them again when you have.', cid)
+		elseif taskNumber == 3 and killNumber >=100 then
+			npcHandler:say('Nice work, here\'s your reward. You can {start} another task when you\'re ready.', cid)
+			doPlayerAddExp(cid,25000) -- give Exp
+			doPlayerSendTextMessage(cid, MESSAGE_EVENT_DEFAULT, "You earned 1000 gold and 25000 experience.") -- Show Gold & Exp
+			doPlayerAddItem(cid, 2152, 10) -- Give 10 Platinum Coins
+			setPlayerStorageValue(cid,2200,0) -- Reset task number to 0
+			setPlayerStorageValue(cid,2201,0) -- Reset kills to 0
+			setPlayerStorageValue(cid,2202,(tasksCompleted + 1)) -- Add 1 to tasks completed
+			doPromotion(cid)
+		else
+			npcHandler:say('You\'re not on this task.', cid)
+		end
+	elseif msgcontains(msg, 'minotaurs') then
+		if taskNumber <= 0 and (getPlayerLevel(cid) >= 21 and getPlayerLevel(cid) <= 50) then
+			npcHandler:say('Do you want to kill 100 minotaurs for me?', cid)
+			setPlayerStorageValue(cid,2203,5) -- Asked if they will kill 100 minotaurs
+		elseif taskNumber == 5 and killNumber <=99 then
+			npcHandler:say('You haven\'t killed 100 minotaurs yet. Ask me about them again when you have.', cid)
+		elseif taskNumber == 5 and killNumber >=100 then
+			npcHandler:say('Nice work, here\'s your reward. You can {start} another task when you\'re ready.', cid)
+			doPlayerAddExp(cid,25000) -- give Exp
+			doPlayerSendTextMessage(cid, MESSAGE_EVENT_DEFAULT, "You earned 1000 gold and 25000 experience.") -- Show Gold & Exp
+			doPlayerAddItem(cid, 2152, 10) -- Give 10 Platinum Coins
+			setPlayerStorageValue(cid,2200,0) -- Reset task number to 0
+			setPlayerStorageValue(cid,2201,0) -- Reset kills to 0
+			setPlayerStorageValue(cid,2202,(tasksCompleted + 1)) -- Add 1 to tasks completed
+			doPromotion(cid)
+		else
+			npcHandler:say('You\'re not on this task.', cid)
+		end
+	elseif msgcontains(msg, 'apes') then
+		if taskNumber <= 0 and (getPlayerLevel(cid) >= 21 and getPlayerLevel(cid) <= 50) then
+			npcHandler:say('Do you want to kill 100 apes for me?', cid)
+			setPlayerStorageValue(cid,2203,6) -- Asked if they will kill 100 apes
+		elseif taskNumber == 6 and killNumber <=99 then
+			npcHandler:say('You haven\'t killed 100 apes yet. Ask me about them again when you have.', cid)
+		elseif taskNumber == 6 and killNumber >=100 then
+			npcHandler:say('Nice work, here\'s your reward. You can {start} another task when you\'re ready.', cid)
+			doPlayerAddExp(cid,25000) -- give Exp
+			doPlayerSendTextMessage(cid, MESSAGE_EVENT_DEFAULT, "You earned 1000 gold and 25000 experience.") -- Show Gold & Exp
+			doPlayerAddItem(cid, 2152, 10) -- Give 10 Platinum Coins
+			setPlayerStorageValue(cid,2200,0) -- Reset task number to 0
+			setPlayerStorageValue(cid,2201,0) -- Reset kills to 0
+			setPlayerStorageValue(cid,2202,(tasksCompleted + 1)) -- Add 1 to tasks completed
+			doPromotion(cid)
+		else
+			npcHandler:say('You\'re not on this task.', cid)
+		end
+	elseif msgcontains(msg, 'mutants') or msgcontains(msg, 'mutated') then
+		if taskNumber <= 0 and (getPlayerLevel(cid) >= 51 and getPlayerLevel(cid) <= 80) then
+			npcHandler:say('Do you want to kill 100 mutants for me?', cid)
+			setPlayerStorageValue(cid,2203,7) -- Asked if they will kill 100 mutated rats
+		elseif taskNumber == 7 and killNumber <=99 then
+			npcHandler:say('You haven\'t killed 100 mutants yet. Ask me about them again when you have.', cid)
+		elseif taskNumber == 7 and killNumber >=100 then
+			npcHandler:say('Nice work, here\'s your reward. You can {start} another task when you\'re ready.', cid)
+			doPlayerAddExp(cid,50000) -- give Exp
+			doPlayerSendTextMessage(cid, MESSAGE_EVENT_DEFAULT, "You earned 5000 gold and 50000 experience.") -- Show Gold & Exp
+			doPlayerAddItem(cid, 2152, 50) -- Give 10 Platinum Coins
+			setPlayerStorageValue(cid,2200,0) -- Reset task number to 0
+			setPlayerStorageValue(cid,2201,0) -- Reset kills to 0
+			setPlayerStorageValue(cid,2202,(tasksCompleted + 1)) -- Add 1 to tasks completed
+			doPromotion(cid)
+		else
+			npcHandler:say('You\'re not on this task.', cid)
+		end
+	elseif msgcontains(msg, 'dragon lords') then
+		if taskNumber <= 0 and (getPlayerLevel(cid) >= 51 and getPlayerLevel(cid) <= 80) then
+			npcHandler:say('Do you want to kill 100 dragon lords for me?', cid)
+			setPlayerStorageValue(cid,2203,4) -- Asked if they will kill 100 dragon lords
+		elseif taskNumber == 4 and killNumber <=99 then
+			npcHandler:say('You haven\'t killed 100 dragon lords yet. Ask me about them again when you have.', cid)
+		elseif taskNumber == 4 and killNumber >=100 then
+			npcHandler:say('Nice work, here\'s your reward. You can {start} another task when you\'re ready.', cid)
+			doPlayerAddExp(cid,50000) -- give Exp
+			doPlayerSendTextMessage(cid, MESSAGE_EVENT_DEFAULT, "You earned 5000 gold and 50000 experience.") -- Show Gold & Exp
+			doPlayerAddItem(cid, 2152, 50) -- Give 10 Platinum Coins
+			setPlayerStorageValue(cid,2200,0) -- Reset task number to 0
+			setPlayerStorageValue(cid,2201,0) -- Reset kills to 0
+			setPlayerStorageValue(cid,2202,(tasksCompleted + 1)) -- Add 1 to tasks completed
+			doPromotion(cid)
+		else
+			npcHandler:say('You\'re not on this task.', cid)
+		end
+	elseif msgcontains(msg, 'heros') then
+		if taskNumber <= 0 and (getPlayerLevel(cid) >= 81 and getPlayerLevel(cid) <= 120) then
+			npcHandler:say('Do you want to kill 100 heros for me?', cid)
+			setPlayerStorageValue(cid,2203,8) -- Asked if they will kill 100 dragon lords
+		elseif taskNumber == 8 and killNumber <=99 then
+			npcHandler:say('You haven\'t killed 100 heros yet. Ask me about them again when you have.', cid)
+		elseif taskNumber == 8 and killNumber >=100 then
+			npcHandler:say('Nice work, here\'s your reward. You can {start} another task when you\'re ready.', cid)
+			doPlayerAddExp(cid,75000) -- give Exp
+			doPlayerSendTextMessage(cid, MESSAGE_EVENT_DEFAULT, "You earned 7500 gold and 75000 experience.") -- Show Gold & Exp
+			doPlayerAddItem(cid, 2152, 75) -- Give 10 Platinum Coins
+			setPlayerStorageValue(cid,2200,0) -- Reset task number to 0
+			setPlayerStorageValue(cid,2201,0) -- Reset kills to 0
+			setPlayerStorageValue(cid,2202,(tasksCompleted + 1)) -- Add 1 to tasks completed
+			doPromotion(cid)
+		else
+			npcHandler:say('You\'re not on this task.', cid)
+		end
+	elseif msgcontains(msg, 'hydras') then
+		if taskNumber <= 0 and (getPlayerLevel(cid) >= 81 and getPlayerLevel(cid) <= 120) then
+			npcHandler:say('Do you want to kill 100 hydras for me?', cid)
+			setPlayerStorageValue(cid,2203,9) -- Asked if they will kill 100 hydras
+		elseif taskNumber == 9 and killNumber <=99 then
+			npcHandler:say('You haven\'t killed 100 hydras yet. Ask me about them again when you have.', cid)
+		elseif taskNumber == 9 and killNumber >=100 then
+			npcHandler:say('Nice work, here\'s your reward. You can {start} another task when you\'re ready.', cid)
+			doPlayerAddExp(cid,75000) -- give Exp
+			doPlayerSendTextMessage(cid, MESSAGE_EVENT_DEFAULT, "You earned 7500 gold and 75000 experience.") -- Show Gold & Exp
+			doPlayerAddItem(cid, 2152, 75) -- Give 10 Platinum Coins
+			setPlayerStorageValue(cid,2200,0) -- Reset task number to 0
+			setPlayerStorageValue(cid,2201,0) -- Reset kills to 0
+			setPlayerStorageValue(cid,2202,(tasksCompleted + 1)) -- Add 1 to tasks completed
+			doPromotion(cid)
+		else
+			npcHandler:say('You\'re not on this task.', cid)
+		end
+	elseif msgcontains(msg, 'yes') and taskTalkStep == 1 then
+		npcHandler:say('Good. Off you go and report back to me when you have killed 100 of them. You can check your quest log at any time to see what task you are on and how many you have killed for that task. You can find rotworms in the city sewers, I have marked the sewer entrance on your minimap.', cid)
+		sewerPos = {x=1077, y=1062, z=7}
+		doAddMapMark(cid, sewerPos, 19, "Sewers")
+		setPlayerStorageValue(cid,2200,1)
+		setPlayerStorageValue(cid,2203,0)
+		setPlayerStorageValue(cid,2201,0) -- Reset kills to 0
+	elseif msgcontains(msg, 'yes') and taskTalkStep == 2 then
+		npcHandler:say('Good. Off you go and report back to me when you have killed 100 of them. You can check your quest log at any time to see what task you are on and how many you have killed for that task.  You can find swamp trolls in the city sewers, I have marked the sewer entrance on your minimap.', cid)
+		sewerPos = {x=1077, y=1062, z=7}
+		doAddMapMark(cid, sewerPos, 19, "Sewers")
+		setPlayerStorageValue(cid,2200,2)
+		setPlayerStorageValue(cid,2203,0)
+		setPlayerStorageValue(cid,2201,0) -- Reset kills to 0
+	elseif msgcontains(msg, 'yes') and (taskTalkStep >= 3 and taskTalkStep <= 9) then
+		npcHandler:say('Good. Off you go and report back to me when you have killed 100 of them. You can check your quest log at any time to see what task you are on and how many you have killed for that task.', cid)
+		setPlayerStorageValue(cid,2200,taskTalkStep)
+		setPlayerStorageValue(cid,2203,0)
+		setPlayerStorageValue(cid,2201,0) -- Reset kills to 0
+	elseif msgcontains(msg, 'yes') and taskTalkStep == 100 then -- Abandoning Task
+		npcHandler:say('Sure thing, I have taken your name off that list, just ask me for a {task} when you want to start a new one.', cid)
+		setPlayerStorageValue(cid,2200,0) -- Reset Task to 0
+		setPlayerStorageValue(cid,2203,0) -- Talkstate to 0
+		setPlayerStorageValue(cid,2201,0) -- Reset kills to 0
+	elseif not msgcontains(msg, 'yes') and taskTalkStep == 100 then -- Abandoning Task
+		npcHandler:say('Perhaps it is best you didn\'t.', cid)
+		setPlayerStorageValue(cid,2203,0) -- Talkstate to 0
+	end
+
+end
+npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
+npcHandler:addModule(FocusModule:new())

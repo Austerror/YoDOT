@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Mutated Human" nameDescription="a mutated human" race="blood" experience="150" speed="245" manacost="100">
+	<health now="240" max="240"/>
+	<look type="323" corpse="9107"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="40" attack="35" poison="30"/>
+		<attack name="poisoncondition" interval="2000" chance="17" range="1" target="1" min="-140" max="-140">
+			<attribute key="areaEffect" value="greenspark"/>
+		</attack>
+		<attack name="death" interval="3000" chance="20" length="3" spread="7" min="-40" max="-50">
+			<attribute key="areaEffect" value="smallclouds"/>
+			<attribute key="areaEffect" value="poison"/>   
+	    </attack>
+		<attack name="speed" interval="3000" chance="15" range="6" speedchange="-450">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</attack>
+	</attacks>
+	<defenses armor="30" defense="30"/>
+	<elements>
+		<element icePercent="20"/>
+		<element holyPercent="-25"/>
+	</elements>
+	<immunities>
+		<immunity death="1"/>
+		<immunity earth="1"/>
+		<immunity paralyze="1"/>
+		<immunity lifedrain="1"/>
+		<immunity drown="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="2500" chance="10">
+		<voice sentence="Take that creature off my back!! I can feel it!"/>
+		<voice sentence="HEEEEEEEELP!" yell="1"/>
+		<voice sentence="You will be the next infected one... GRAAAAAAAAARRR!"/>
+		<voice sentence="Science... is a curse."/>
+		<voice sentence="Run as fast as you can."/>
+		<voice sentence="Oh by the gods! What is this... aaaaaargh!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="130" chance1="88000" chancemax="0"/> -- Gold
+		<item id="11225" chance="19890"/> --mutated flesh
+		<item id="2226" chance="10060"/> --fishbone
+		<item id="2483" chance="7930" /> -- scale armor
+		<item id="8368" chance="7850"/> --cheese
+		<item id="3976" countmax="3" chance1="7140" /> -- worms
+		<item id="2161" subtype="200" chance="5080"/> --strange talisman
+		<item id="2376" chance="4820"/> --sword
+		<item id="9808" chance="1990"/> --rusty armor (common)
+		<item id="7910" countmax="1" chance1="650"/> --peanut
+		<item id="2801" chance="410"/> --fern
+		<item id="2170" subtype="200" chance="70"/> --silver amulet
+	</loot>
+</monster>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<creaturescripts>
+	<event type="login" name="PlayerLogin" event="script" value="login.lua"/>
+	<event type="preparedeath" name="NoDrop" event="script" value="nodrop.lua"/>
+	<event type="death" name="PlayerDeath" event="script" value="playerdeath.lua"/>
+	<event type="kill" name="MonsterKills" event="script" value="monsterkills.lua"/>
+	<event type="combat" name="PvP" event="script" value="pvp.lua"/>
+	<event type="channeljoin" name="GuildEvents" event="script" value="guild.lua"/>
+	<event type="mailreceive" name="Mail" event="script" value="mail.lua"/>
+	<event type="reportbug" name="SaveReportBug" event="script" value="reportbug.lua"/>
+	<event type="advance" name="AdvanceSave" event="script" value="advancesave.lua"/>
+	<event type="textedit" name="BanBook" event="script" value="banbook.lua"/>
+	<event type="think" name="Antibot" event="script" value="antibot.lua"/>
+	<event type="think" name="Idle" event="script" value="idle.lua"/>
+	<event type="kill" name="Arena" event="script" value="arena.lua"/>
+</creaturescripts>

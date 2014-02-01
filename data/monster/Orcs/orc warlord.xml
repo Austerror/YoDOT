@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="orc warlord" nameDescription="an orc warlord" race="blood" experience="670" speed="250" manacost="0">
+	<health now="950" max="950"/>
+	<look type="2" head="20" body="30" legs="40" feet="50" corpse="6008"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="65" attack="65"/>
+		<attack name="physical" interval="3000" chance="25" range="7" min="-100" max="-120">
+		  <attribute key="shootEffect" value="throwingstar"/>
+		</attack>
+	</attacks>
+	<defenses armor="22" defense="35">
+		<defense name="invisible" interval="1000" chance="4" duration="2000">
+		  <attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity physical="0"/>
+		<immunity energy="0"/>
+		<immunity fire="1"/>
+		<immunity poison="0"/>
+		<immunity lifedrain="0"/>
+		<immunity paralyze="0"/>
+		<immunity outfit="1"/>
+		<immunity drunk="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Ranat Ulderek!"/>
+		<voice sentence="Orc buta bana!"/>
+		<voice sentence="Ikem rambo zambo!"/>
+		<voice sentence="Futchi maruk buta!"/>
+	</voices>
+	<loot>
+		<item id="12409" chance="23810"/> -- Broken Helmet
+		<item id="12435" chance="20740"/> -- Orc Leather
+		<item id="2148" chance="17780" countmax="50" /> -- GP
+		<item id="2399" chance="14070" countmax="22" /> -- throwing star
+		<item id="2667" chance="11750" countmax="2" /> -- fish
+		<item id="11113" chance="10370"/> -- Orc Tooth
+		<item id="2428" chance="5610" /> -- orcish axe
+		<item id="12436" chance="4870"/> -- Skull Belt
+		<item id="3965" chance="4870" /> -- Hunting Spear
+		<item id="2463" chance="4760" /> -- plate armor
+		<item id="2419" chance="4340"/> -- Scimitar
+		<item id="2647" chance="3600" /> -- plate legs
+		<item id="2200" chance="2120" /> -- protection amulet
+		<item id="2490" chance="1380" /> -- dark helmet
+		<item id="2465" chance="850" /> -- Brass Armor
+		<item id="7618" chance="530"/> -- HP
+		<item id="2434" chance="420"/> -- Dragon Hammer
+		<item id="7891" chance="320"/> -- Magma Boots
+	</loot>
+</monster>

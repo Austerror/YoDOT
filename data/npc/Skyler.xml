@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Skyler" script="data/npc/scripts/skyler.lua" walkinterval="0" floorchange="0" direction="0">
+	<health now="100" max="100"/>
+	<look type="138" head="120" body="109" legs="75" feet="17" direction="1" addons="2"/>
+    <parameters>
+        <parameter key="message_greet" value="Welcome |PLAYERNAME|."/>
+        <parameter key="message_alreadyfocused" value="We're already talking |PLAYERNAME|."/>
+        <parameter key="message_farewell" value="Goodbye and take care."/>
+    </parameters>
+</npc>

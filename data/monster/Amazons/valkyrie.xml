@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="valkyrie" nameDescription="a valkyrie" race="blood" experience="85" speed="200" manacost="450">
+  <health now="190" max="190"/>
+  <look type="139" head="113" body="57" legs="95" feet="113" corpse="6081"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="10"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="24" attack="25"/>
+    <attack name="physical" interval="1000" chance="10" range="7" min="0" max="-50">
+      <attribute key="shootEffect" value="spear"/>
+    </attack>
+  </attacks>
+  <defenses armor="16" defense="14"/>
+  <elements>
+	<element icePercent="10"/>
+	<element holyPercent="7"/>
+	<element firePercent="10"/>
+	<element physicalPercent="-8"/>
+	<element deathPercent="-7"/>
+  </elements>
+  <immunities>
+  </immunities>
+  <voices interval="5000" chance="10">
+	<voice sentence="Another head for me!"/>
+    <voice sentence="Stand still!"/>
+    <voice sentence="One more head for me!"/>
+    <voice sentence="Head off!"/>
+  </voices>
+  <loot>
+	<item id="2389" countmax="3" chance="54660"/> -- Spear
+    <item id="2148" countmax="12" chance="32580"/> -- Gold
+	<item id="2666" countmax="3" chance="29850"/> -- Meat
+    <item id="2464" chance="10050"/> -- Chain Armor
+	<item id="2674" countmax="2" chance="6640"/> -- Red Apples
+	<item id="12399" chance="5830"/> -- Girlish Hair Deco
+	<item id="3965" chance="5130"/> -- Hunting Spear
+	<item id="12400" chance="3240"/> -- Protective Charm
+	<item id="2200" chance="1210"/> -- Protection Amulet
+	<item id="2463" chance="810"/> -- Plate Armor
+    <item id="2229" countmax="1" chance="690"/> -- Skull
+	<item id="7618" chance="520"/> -- HP
+	<item id="2387" chance="450"/> -- Double Axe
+	<item id="2145" countmax="1" chance="130"/> -- Small Diamond
+  </loot>
+</monster>

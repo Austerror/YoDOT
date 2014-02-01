@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Little Corym Charlatan" nameDescription="a little corym charlatan" race="blood" experience="40" speed="" manacost="0">
+	<health now="90" max="90"/>
+	<look type="523" head="118" body="118" legs="118" feet="118" corpse=""/>
+	<targetchange interval="3000" chance="5"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag staticattack="95"/>
+		<flag lightlevel="0"/>
+		<flag lightcolor="0"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+	</attacks>
+	<defenses armor="" defense="">
+	</defenses>
+	<elements>
+		<element icePercent=""/>
+		<element firePercent=""/>
+		<element earthPercent=""/>
+		<element holyPercent=""/>
+		<element energyPercent=""/>
+		<element deathPercent=""/>
+	</elements>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="2000" chance="5">
+		<voice sentence=""/>
+	</voices>
+	<loot>
+	</loot>
+</monster>

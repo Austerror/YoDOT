@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Crazy Witch" nameDescription="a crazy witch" race="blood" experience="0" speed="0" manacost="0">
+	<health now="2000" max="2000"/>
+	<look type="54" head="0" body="0" legs="0" feet="0"/>
+	<targetchange interval="2000" chance="95"/>
+	<strategy attack="0" defense="0"/>
+	<flags>
+	<flag summonable="0"/>
+	<flag attackable="0"/>
+	<flag hostile="1"/>
+	<flag illusionable="0"/>
+	<flag convinceable="0"/>
+	<flag pushable="0"/>
+	<flag canpushitems="1"/>
+	<flag canpushcreatures="0"/>
+	<flag targetdistance="2"/>
+	<flag staticattack="10"/>
+	<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="outfit" interval="2000" range="6" radius="4" chance="4" target="1" monster="pig" duration="20000">
+			<attribute key="areaEffect" value="yellowspark"/>
+		</attack>
+		<attack name="outfit" interval="2000" range="6" radius="4" chance="4" target="1" monster="skunk" duration="20000">
+			<attribute key="areaEffect" value="yellowspark"/>
+		</attack>
+		<attack name="outfit" interval="2000" range="6" radius="4" chance="4" target="1" monster="chicken" duration="20000">
+			<attribute key="areaEffect" value="yellowspark"/>
+		</attack>
+		<attack name="outfit" interval="2000" range="6" radius="4" chance="4" target="1" monster="donkey" duration="20000">
+			<attribute key="areaEffect" value="yellowspark"/>
+		</attack>
+		<attack name="outfit" interval="2000" range="6" radius="4" chance="4" target="1" monster="kongra" duration="20000">
+			<attribute key="areaEffect" value="yellowspark"/>
+		</attack>
+	</attacks>
+	<defenses armor="999" defense="999">
+		<defense name="healing" interval="1000" chance="50" min="1500" max="2000">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity name="physical"/>
+		<immunity name="energy"/>
+		<immunity name="fire"/>
+		<immunity name="poison"/>
+		<immunity name="drown"/>
+		<immunity name="lifedrain"/>
+		<immunity name="paralyze"/>
+		<immunity name="outfit"/>
+		<immunity name="drunk"/>
+		<immunity name="invisible"/>
+	</immunities>
+</monster>

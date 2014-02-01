@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="fire devil" nameDescription="a fire devil" race="blood" experience="110" speed="190" manacost="530">
+  <health now="200" max="200"/>
+  <look type="40" head="20" body="30" legs="40" feet="50" corpse="5985"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="4"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" min="-20" max="-50"/>
+    <attack name="fire" interval="1000" chance="11" range="7" radius="4" target="1" min="-60" max="-90">
+      <attribute key="shootEffect" value="fire"/>
+      <attribute key="areaEffect" value="firearea"/>
+    </attack>
+    <attack name="fire" interval="2000" chance="30" range="7" radius="2" target="1" min="-20" max="-50">
+      <attribute key="shootEffect" value="fire"/>
+      <attribute key="areaEffect" value="firearea"/>
+    </attack>
+  </attacks>
+  <defenses armor="13" defense="15"/>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="1"/>
+    <immunity poison="0"/>
+    <immunity lifedrain="0"/>
+    <immunity paralyze="0"/>
+    <immunity outfit="0"/>
+    <immunity drunk="0"/>
+    <immunity invisible="0"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="Hot, eh?"/>
+    <voice sentence="Hell, oh hell!"/>
+  </voices>
+  <loot>
+	<item id="12469" chance="20440"/> -- Small Pitchfork
+	<item id="2260" chance="10730"/> -- Blank Rune
+	<item id="2419" chance="2900"/> -- Scimitar
+	<item id="2050" chance="1450"/> -- Torch
+	<item id="2050" chance="1450"/> -- Torch
+	<item id="2387" chance="1390"/> -- Double Axe
+	<item id="2568" chance="790"/> -- Cleaver
+	<item id="2185" chance="330" /> -- Necrotic Rod
+	<item id="2515" chance="300"/> -- Guardian Shield
+	<item id="2150" chance="150"/> -- Small Amethyst
+  </loot>
+</monster>

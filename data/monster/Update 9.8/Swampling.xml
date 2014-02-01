@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Swampling" nameDescription="a swampling" race="venom" experience="45" speed="" manacost="0">
+	<health now="80" max="80"/>
+	<look type="535" corpse=""/>
+	<targetchange interval="3000" chance="5"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag staticattack="95"/>
+		<flag lightlevel="0"/>
+		<flag lightcolor="0"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+	</attacks>
+	<defenses armor="" defense="">
+	</defenses>
+	<elements>
+		<element icePercent=""/>
+		<element firePercent=""/>
+		<element earthPercent=""/>
+		<element holyPercent=""/>
+		<element energyPercent=""/>
+		<element deathPercent=""/>
+	</elements>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="2000" chance="5">
+		<voice sentence=""/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="12" chance="88400" /> <!-- Gold Coin -->
+<item id="20102" chance="17530" /> <!-- Swampling Moss -->
+<item id="20103" chance="13580" /> <!-- Piece of Swampling Wood -->
+<item id="2787" chance="9880" /> <!-- White Mushroom -->
+<item id="20104" chance="7410" /> <!-- Swampling Club -->
+<item id="8723" chance="2960" /> <!-- Rope -->
+	</loot>
+</monster>

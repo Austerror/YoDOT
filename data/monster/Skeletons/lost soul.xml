@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="lost soul" nameDescription="a lost soul" race="undead" experience="4000" speed="280" manacost="0">
+  <health now="8500" max="8500"/>
+  <look type="232" corpse="6310"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="85" attack="95"/>
+
+    <attack name="lifedrain" interval="1000" chance="13" radius="4" target="0" min="-150" max="-250">
+      <attribute key="areaEffect" value="smallclouds"/>
+	</attack>
+
+	<attack name="speed" interval="2000" chance="18" radius="6" target="0" speedchange="-600" duration="7000">
+	<attribute key="areaEffect" value="redshimmer"/>
+	</attack>
+
+   </attacks>
+  <defenses armor="35" defense="35">
+    <defense name="speed" interval="1000" chance="35" speedchange="370" duration="30000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+  </defenses>
+  	<elements>
+		<element energyPercent="10"/>
+		<element earthPercent="50"/>
+		<element holyPercent="-20"/>
+	</elements>
+  <immunities>
+    <immunity fire="1"/>
+    <immunity poison="1"/>
+    <immunity death="1"/>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="30">
+    <voice sentence="Forgive Meeeee!"/>
+    <voice sentence="Mouuuurn meeee!"/>
+  </voices>
+  <loot>
+    <item id="2148" chance="99720" countmax="320" /> -- gold coin
+	<item id="2260" chance="34170" /> -- blank rune
+	<item id="11233" chance="30180"/> -- unholy bone
+	<item id="9809" chance="12130"/> -- Rusty armor (semi rare)
+	<item id="9810" chance="12130"/> -- Rusty armor (rare)
+	<item id="2457" chance="11390" /> -- steel helmet
+	<item id="7590" chance="10480"/> -- great mana potion
+	<item id="2463" chance="10020"/> -- plate armor	
+	<item id="2483" chance="9050"/> -- scale armor
+	<item id="3976" chance="7630" /> -- Soul Orb
+	<item id="6500" chance="6320" /> -- demonic essence
+	<item id="5806" chance="5640" /> -- silver goblet
+	<item id="2152" chance="5350" countmax="3" /> -- Platinums	
+	<item id="2197" chance="2280" /> -- ssa
+	<item id="7413" chance="1140" /> -- titan axe
+	<item id="6300" chance="1140"/> -- death ring
+	<item id="6526" chance="1140" /> -- skeleton decoration
+	<item id="2133" chance="800" /> -- ruby necklace
+	<item id="2463" chance="740" /> -- skull staff
+	<item id="2050" chance="700" /> -- torch
+	<item id="2227" chance="550" /> -- rotten meat
+	<item id="2227" chance="550" /> -- rotten meat
+	<item id="2173" chance="190"/> -- aol
+	<item id="2480" chance="170" /> -- legion helmet
+	<item id="12608" chance="110" /> -- broken key ring
+	
+  </loot>
+</monster>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Draken Warmaster" nameDescription="a draken warmaster" race="blood" experience="2400" speed="220" manacost="0">
+<health now="4150" max="4150"/>
+<look type="334" corpse="11107"/>
+<targetchange interval="5000" chance="8"/>
+<strategy attack="100" defense="0"/>
+<flags>
+<flag summonable="0"/>
+<flag attackable="1"/>
+<flag hostile="1"/>
+<flag illusionable="1"/>
+<flag convinceable="0"/>
+<flag pushable="0"/>
+<flag canpushitems="1"/>
+<flag canpushcreatures="0"/>
+<flag targetdistance="1"/>
+<flag staticattack="90"/>
+<flag runonhealth="0"/>
+</flags>
+<attacks>
+	<attack name="melee" interval="2000" skill="55" attack="50"/>
+<attack name="fire" interval="2000" chance="15" range="7" radius="4" target="1" min="-120" max="-480">
+<attribute key="shootEffect" value="fire"/>
+<attribute key="areaEffect" value="firearea"/>
+</attack>
+</attacks>
+<defenses armor="16" defense="19"/>
+<elements>
+<element physicalPercent="1"/>
+<element holyPercent="20"/>
+<element deathPercent="20"/>
+<element energyPercent="30"/>
+<element icePercent="15"/>
+<element earthPercent="20"/>
+</elements>
+<immunities>
+<immunity fire="1"/>
+</immunities>
+<loot>
+	<item id="2148" countmax="200" chance="95940"/><!-- gold coin -->
+	<item id="2152" countmax="5" chance="49240"/> -- Platinum Coin
+	<item id="2666" countmax="5"  chancemax="29900"/> -- Meat
+	<item id="11321" chance="12200"/> -- Bone Shoulderplate
+	<item id="11323" chance="7840"/> -- Zaoan Halberd
+	<item id="11322" chance="6820"/> -- Warmaster's Wristguard
+	<item id="7591" countmax="3" chance="4880"/> -- GHP
+	<item id="8473" countmax="1" chance="4030"/><!-- ultimate health potion -->
+	<item id="2528" chance="2020"/> -- Tower Shield
+	<item id="11303" chance="1980"/> -- Zaoan Shoes
+	<item id="2147" countmax="5" chance="1570"/><!-- small ruby -->
+	<item id="11304" chance="910"/> -- Zaoan Legs
+	<item id="11305" chance="870"/> -- Drakinata
+	<item id="11301" chance="840"/> -- Zaoan Armor
+	<item id="2123" chance="150"/> -- RoTS
+</loot>
+</monster>

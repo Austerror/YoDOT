@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Emerald Damselfly" nameDescription="an emerald damselfly" race="blood" experience="35" speed="" manacost="0">
+	<health now="90" max="90"/>
+	<look type="528" corpse=""/>
+	<targetchange interval="3000" chance="5"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag staticattack="95"/>
+		<flag lightlevel="0"/>
+		<flag lightcolor="0"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+	</attacks>
+	<defenses armor="" defense="">
+	</defenses>
+	<elements>
+		<element icePercent=""/>
+		<element firePercent=""/>
+		<element earthPercent=""/>
+		<element holyPercent=""/>
+		<element energyPercent=""/>
+		<element deathPercent=""/>
+	</elements>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="2000" chance="5">
+		<voice sentence=""/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="18" chance="90670" /> <!-- Gold Coin -->
+<item id="19738" chance="12150" /> <!-- Damselfly Wing -->
+<item id="2544" countmax="5" chance="8890" /> <!-- Arrow -->
+<item id="19743" chance="8680" /> <!-- Damselfly Eye -->
+<item id="7620" chance="2820" /> <!-- Mana Potion -->
+<item id="8723" chance="2820" /> <!-- Rope -->
+<item id="7618" chance="1740" /> <!-- Health Potion -->
+	</loot>
+</monster>

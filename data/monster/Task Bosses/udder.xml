@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Udder" nameDescription="Udder" race="blood" experience="350" speed="170" manacost="0">
+  <health now="355" max="355"/>
+  <look type="23" head="20" body="30" legs="40" feet="50" corpse="5981"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="4"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="32" attack="32" poison="4"/>
+    <attack name="energy" interval="1000" chance="14" range="7" min="-35" max="-65">
+      <attribute key="shootEffect" value="energy"/>
+      <attribute key="areaEffect" value="energy"/>
+    </attack>
+    <attack name="fire" interval="2000" chance="10" range="7" radius="1" target="1" min="-55" max="-115">
+      <attribute key="shootEffect" value="fire"/>
+      <attribute key="areaEffect" value="firearea"/>
+    </attack>
+    <attack name="energyfield" interval="1000" chance="9" range="7" radius="1" target="1">
+      <attribute key="shootEffect" value="energy"/>
+    </attack>
+  </attacks>
+  <defenses armor="32" defense="32"/>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="1"/>
+    <immunity fire="0"/>
+    <immunity poison="0"/>
+    <immunity lifedrain="0"/>
+    <immunity paralyze="0"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="This is Udder Madness!!"/>
+    <voice sentence="Milk this!"/>
+	<voice sentence="Ronald is dead to me!"/>
+  </voices>
+ 	<summons maxSummons="2">
+		<summon name="Minotaur Guard" interval="1000" chance="10"/>
+	</summons>
+  <loot>
+	<item id="2148" chance="82760" countmax="150" /> -- gold coin
+	<item id="7886" chance="15000"/> -- Terra Boots
+	<item id="7887" chance="15000"/> -- Terra Amulet
+	<item id="7618" countmax="5" chance="25000"/> -- HP
+	<item id="7620" countmax="5" chance="25000"/> -- MP
+  </loot>
+</monster>

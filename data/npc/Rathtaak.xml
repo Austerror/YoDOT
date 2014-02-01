@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Rathtaak" script="data/npc/scripts/rathtaak.lua" walkinterval="0" floorchange="0" direction="2">
+	<health now="100" max="100"/>
+	<look type="465" head="78" body="105" legs="86" feet="102" addons="1"/>
+	<parameters>
+		<parameter key="message_greet" value="Ssssalutationsssss |PLAYERNAME|. I {trade} in magical itemsss and run the local {lottery}. If you would like to look at my {potions}sss only just asssssk."/>
+	</parameters>
+</npc>

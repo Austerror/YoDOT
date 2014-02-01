@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Claude" script="data/npc/scripts/claude.lua" walkinterval="0" floorchange="0" direction="2">
+	<health now="100" max="100"/>
+	<look type="128" head="105" body="92" legs="85" feet="104" addons="0"/>
+    <parameters>
+        <parameter key="message_greet" value="Welcome to my shop |PLAYERNAME|. Ask me for a {trade}."/>
+        <parameter key="message_alreadyfocused" value="We're already talking |PLAYERNAME|."/>
+        <parameter key="message_farewell" value="Goodbye and take care."/>
+    </parameters>
+</npc>

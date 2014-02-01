@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Arthas" script="data/npc/scripts/bank.lua" walkinterval="0" floorchange="0" access="5" level="1" maglevel="1" direction="0">
+	<health now="150" max="150"/>
+	<look type="128" head="97" body="109" legs="119" feet="115" corpse="2212"/>
+	<parameters>
+	</parameters>
+</npc>

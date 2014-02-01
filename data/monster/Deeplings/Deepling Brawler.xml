@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Deepling Brawler" nameDescription="a deepling brawler" race="blood" experience="260" speed="190" manacost="0">
+	<health now="380" max="380"/>
+	<look type="470" corpse="15500"/>
+	<targetchange interval="3000" chance="5"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="95"/>
+		<flag runonhealth="30"/>
+	</flags>
+	<attacks>
+		<attack name="physical" range="1" interval="2000" min="-1" max="-90"/>
+		<attack name="physical" interval="2000" chance="34" range="5" radius="1" target="1" min="-1" max="-100">
+			<attribute key="shootEffect" value="SPEAR"/>
+		</attack>
+	</attacks>
+	<defenses armor="17" defense="18">
+	</defenses>
+	<elements>
+		<element energyPercent="10"/>
+		<element earthPercent="5"/>
+	</elements>
+	<immunities>
+		<immunity fire="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Qjell afar gou jey!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="44" chance="95690" /> <!-- Gold Coin -->
+		<item id="2667" countmax="3" chance="20690" /> <!-- fish -->
+		<item id="15430" chance="13790" /> <!-- Deepling Scale -->
+		<item id="13870" chance="6030" /> <!-- Eye of a Deepling -->
+		<item id="13838" chance="3450" /> <!-- Heavy Trident -->
+		<item id="5895" chance="860" /> <!-- Fish Fin -->
+	</loot>
+</monster>

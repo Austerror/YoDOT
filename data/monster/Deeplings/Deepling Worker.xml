@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Deepling Worker" nameDescription="a deepling worker" race="blood" experience="130" speed="175" manacost="0">
+	<health now="190" max="190"/>
+	<look type="470" corpse="15500"/>
+	<targetchange interval="3000" chance="5"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="95"/>
+		<flag runonhealth="30"/>
+	</flags>
+	<attacks>
+		<attack name="physical" range="1" interval="2000" min="-1" max="-70"/>
+	</attacks>
+	<defenses armor="15" defense="18">
+	</defenses>
+	<elements>
+		<element energyPercent="20"/>
+		<element earthPercent="20"/>
+	</elements>
+	<immunities>
+		<immunity fire="1"/>
+		<immunity ice="1"/>
+		<immunity drown="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Qjell afar gou jey!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="25" chance="75180" /> <!-- Gold Coin -->
+		<item id="2667" countmax="3" chance="12130" /> <!-- fish -->
+		<item id="15430" chance="7060" /> <!-- Deepling Scale -->
+		<item id="13838" chance="520" /> <!-- Heavy Trident -->
+		<item id="5895" chance="350" /> <!-- Fish Fin -->
+		<item id="13870" chance="270" /> <!-- Eye of a Deepling -->
+		<item id="2149" chance="90" /> <!-- Small Emerald -->
+	</loot>
+</monster>

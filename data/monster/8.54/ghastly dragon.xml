@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Ghastly Dragon" nameDescription="a ghastly dragon" race="undead" experience="4600" speed="410" manacost="0">
+<health now="7800" max="7800"/>
+<look type="351" corpse="11362"/>
+<targetchange interval="5000" chance="8"/>
+<strategy attack="100" defense="0"/>
+<flags>
+<flag summonable="0"/>
+<flag attackable="1"/>
+<flag hostile="1"/>
+<flag illusionable="1"/>
+<flag convinceable="0"/>
+<flag pushable="0"/>
+<flag canpushitems="1"/>
+<flag canpushcreatures="1"/>
+<flag targetdistance="1"/>
+<flag staticattack="90"/>
+<flag runonhealth="366"/>
+</flags>
+<attacks>
+<attack name="melee" interval="2000" skill="55" attack="115"/>
+<attack name="physical" interval="3000" chance="17" length="8" spread="3" min="-150" max="-250">
+<attribute key="areaEffect" value="bluebubble"/>
+</attack>
+<attack name="physical" interval="3000" chance="10" range="7" min="-0" max="-500">
+<attribute key="shootEffect" value="suddendeath"/>
+<attribute key="areaEffect" value="mortarea"/>
+</attack>
+		<attack name="speed" interval="1000" chance="10" range="7" speedchange="-600" duration="20000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</attack>
+<attack name="lifedrain" interval="2000" chance="21" radius="6" target="0" min="-200" max="-450">
+<attribute key="areaEffect" value="poff"/>
+</attack>
+</attacks>
+<defenses armor="45" defense="35"/>
+<elements>
+<element firePercent="10"/>
+<element physicalPercent="-10"/>
+<element icePercent="50"/>
+<element holyPercent="-15"/>
+<element energyPercent="-10"/>
+</elements>
+<immunities>
+<immunity paralyze="1"/>
+<immunity invisible="1"/>
+<immunity death="1"/>
+<immunity earth="1"/>
+</immunities>
+<voices interval="5000" chance="10">
+<voice sentence="EMBRACE MY GIFTS!" yell="1"/>
+<voice sentence="I WILL FEAST ON YOUR SOUL!" yell="1"/>
+</voices>
+<loot>
+<item id="2148" countmax="209" chance="99210"/> -- Gold Coin
+<item id="2152" countmax="2" chance="29490"/> -- Platinum Coin
+<item id="11367" chance="19630"/> -- Undead Heart
+<item id="5944" chance="12520"/> -- Soul Orb (SR)
+<item id="6500" countmax="1" chance="10950"/> -- Demonic Essence (SR)
+<item id="7591" chance="8780"/> -- Great Health Potion (SR)
+<item id="11323" chance="8580"/> -- Zaoan Halberd
+<item id="11366" chance="6210"/> -- Ghastly Dragon Head (SR)
+<item id="8472" chance="4930"/> -- Great Spirit Potion (SR)
+<item id="8473" chance="4640"/> -- Ultimate Health Potion (SR)
+<item id="11309" chance="4340"/> -- Twin Hooks (SR)
+<item id="9809" chance="2960"/> -- Semi-Rare Rusty Armor (SR)
+<item id="9810" chance="2960"/> -- Rare Rusty Armor (R)
+<item id="11303" chance="1680"/> -- Zaoan Shoes (SR)
+<item id="11304" chance="1380"/> -- Zaoan Legs (R)
+<item id="11368" chance="890"/> -- Jade Hat (R)
+<item id="11301" chance="790"/> -- Zaoan Armor (R)
+<item id="11227" chance="690"/> -- Shiny Stone (R)
+<item id="11355" chance="800"/> -- Spellweaver's Robe (R)
+<item id="11240" chance="590"/> -- Guardian Boots (VR)
+<item id="11305" chance="390"/> -- Drakinata (R)
+<item id="11302" chance="340"/> -- Zaoan Helmet (VR)
+<item id="11307" chance="50"/> -- Zaoan Sword (VR)
+</loot>
+</monster>

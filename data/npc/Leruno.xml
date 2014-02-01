@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Leruno" script="data/npc/scripts/leruno.lua" walkinterval="0" floorchange="0" direction="1">
+	<health now="100" max="100"/>
+	<look type="129" head="20" body="39" legs="45" feet="7" addons="3"/>
+   <flags>
+    <flag pushable="0"/>
+  </flags>
+</npc>

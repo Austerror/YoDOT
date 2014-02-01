@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Corym Vanguard" nameDescription="a corym vanguard" race="blood" experience="490" speed="180" manacost="0">
+	<health now="700" max="700"/>
+	<look type="534" head="76" body="76" legs="76" feet="76" corpse="19970"/>
+	<targetchange interval="3000" chance="5"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag staticattack="95"/>
+		<flag lightlevel="0"/>
+		<flag lightcolor="0"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-1" max="-140"/>
+		<attack name="earth" interval="3000" chance="12" length="8" spread="3" min="-50" max="-90">
+			<attribute key="areaEffect" value="poison"/>
+		</attack>
+		<attack name="earth" interval="2000" chance="13" range="7" min="-40" max="-60">
+			<attribute key="shootEffect" value="earth"/>
+		</attack>
+	</attacks>
+	<defenses armor="18" defense="18">
+		<defense name="healing" interval="1000" chance="13" min="30" max="60">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element icePercent="-20"/>
+		<element energyPercent="-20"/>
+	</elements>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="2000" chance="5">
+		<voice sentence="Gimme! Gimme!" />
+	</voices>
+	<loot>
+		<item id="2148" countmax="120" chance="100000" /> <!-- Gold Coin -->
+		<item id="8368" chance="19810" /> <!-- Cheese -->
+		<item id="20097" chance="16320" /> <!-- Cheese Cutter -->
+		<item id="20100" chance="15590" /> <!-- Soft Cheese -->
+		<item id="20101" chance="14610" /> <!-- Rat Cheese -->
+		<item id="20092" chance="5110" /> <!-- Ratana -->
+		<item id="20093" chance="5050" /> <!-- Life Preserver -->
+		<item id="20090" chance="4900" /> <!-- Spike Shield -->
+		<item id="20098" chance="3830" /> <!-- Cheesy Figurine -->
+		<item id="20139" chance="3240" /> <!-- Spikey Club -->
+		<item id="20126" chance="1620" /> <!-- Leather Harness -->
+		<item id="20105" chance="10" /> <!-- Rat God Doll -->
+	</loot>
+</monster>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quests>
+	<quest name="!Fishing" startstorageid="2317" startstoragevalue="1">
+		<mission name="Skill" storageid="2317" startvalue="1" endvalue="20">
+			<missionstate id="1" description="Rookie.&#xA;Your fishing skill can be raised to a maximum of 30."/>
+			<missionstate id="2" description="Intermediate.&#xA;Your fishing skill can be raised to a maximum of 60."/>
+			<missionstate id="3" description="Expert.&#xA;Your fishing skill can be raised to a maximum of 90."/>
+		</mission>
+		<mission name="Daily Quest" storageid="2328" startvalue="1" endvalue="20">
+			<missionstate id="1" description="10 rainbow trout caught from the oasis south west of town."/>
+			<missionstate id="2" description="5 minotaur fishing nets burned."/>
+			<missionstate id="3" description="Bloated Steam Belly caught from the geisor in Northrend."/>
+			<missionstate id="4" description="Releasing the swamp fish back into a swamp."/>
+		</mission>
+		<mission name="Daily Status" storageid="2329" startvalue="1" endvalue="20">
+			<missionstate id="1" description="You haven't completed this daily."/>
+			<missionstate id="2" description="You have completed the daily and should return to Rex for your reward."/>
+		</mission>
+	</quest>
+	<quest name="Elwynns Requests" startstorageid="2003" startstoragevalue="1">
+		<mission name="Elwynns Says" storageid="2003" startvalue="0" endvalue="10">
+			<missionstate id="0" description="You have met Elwynn..."/>
+			<missionstate id="1" description="Retrieve the items out of the chest in Elwyns house. Talk to Elwynn about your mission when you have done this."/>
+			<missionstate id="2" description="Retrieve the items out of the chest in Elwyns house. Talk to Elwynn about your mission when you have done this."/>
+			<missionstate id="3" description="You retrieved a backpack with a shovel and rope inside."/>
+			<missionstate id="4" description="Ctrl-Left Click the backpack to open it. Talk to Elwynn about your mission when you have done this."/>
+			<missionstate id="5" description="Elwynn has asked you to use your shovel to open the hole next to his house. Once you have opened it, enter the hole. Use the armor and weapon racks to receive some quipment."/>
+			<missionstate id="6" description="Use your rope on the rope spot to get out and talk to Elwynn about your mission."/>
+			<missionstate id="7" description="Elwynn has directed you to equip the weapon and armor you retrieved to their correct slots. Talk to Elwynn about your mission when you have done this."/>
+			<missionstate id="8" description="When you are ready tell Elwynn you would like to leave."/>
+			<missionstate id="9" description="Elwynn asked that you seek out Jesse in Thane when you arrive. Now, ask Elwynn for a teleport and he will send you to the Thane temple."/>
+			<missionstate id="10" description="You have completed all of Elwynns requests and arrived in New Haven. Don't forget to seek out Jesse for a mission."/>
+		</mission>
+	</quest>
+	<quest name="A Means To An End..." startstorageid="2010" startstoragevalue="1">
+		<mission name="... aka I'm getting outta here!" storageid="2010" startvalue="0" endvalue="18">
+			<missionstate id="0" description="You have met Jesse Pinkman..."/>
+			<missionstate id="1" description="Jesse has asked you if you want to reach level 8, the obvious answer is yes."/>
+			<missionstate id="2" description="Jesse has asked if you would kill 10 rats for him. Answer 'ok' to accept his task."/>
+			<missionstate id="3" description="You have agreed to kill 10 rats for Jesse. Return to him when you have done this."/>
+			<missionstate id="4" description="Jesse has rewarded you for your efforts with gold and experience. Ask him about a mission when you are ready to continue."/>
+			<missionstate id="5" description="Jesse has asked if you would kill 5 wolves for him. Answer 'ok' to accept his task."/>
+			<missionstate id="6" description="You have agreed to kill 5 wolves for Jesse. Wolves can be found on the headland south of town. Return to him when you have done this and ask him about your mission."/>
+			<missionstate id="7" description="Jesse has rewarded you for your efforts with gold and experience. He has suggested that you see Gus for more missions. He also marked Gus's location on your minimap."/>
+			<missionstate id="8" description="Gus has asked if you would like to get a black sheep mount and is awaiting your answer."/>
+			<missionstate id="9" description="Gus has given you some reins and directed you to 'use' them on a black sheep to tame it. When you have tamed a black sheep talk to him about this mission."/>
+			<missionstate id="10" description="Gus has told you that you can mount and dismount by pressing Ctrl-R. Now ask him about another mission."/>
+			<missionstate id="11" description="Gus wants you to ask him about a spell."/>
+			<missionstate id="12" description="Gus told you about 'Utevo Lux', a light spell that you can use. Now ask him about the task he has for you."/>
+			<missionstate id="13" description="Gus has asked if you would kill 10 trolls for him. Answer 'yes' to accept his task."/>
+			<missionstate id="14" description="You have agreed to kill 10 trolls for Gus. Trolls can be found in the caves through the hole behind Toms Meats in town. Return to him when you have done this and ask him about your mission."/>
+			<missionstate id="15" description="Gus has rewarded you for your efforts and directed you back to Jesse. You should go see Jesse now."/>
+			<missionstate id="16" description="Jesse has asked if Gus is finished with you. If you are not yet level 8 you should go hunt some more until you are."/>
+			<missionstate id="17" description="You are now level 8 and Jesse wishes to send you to The Oracle. When you are ready let him know you would like to leave."/>
+			<missionstate id="18" description="You got out of New Haven."/>
+		</mission>
+	</quest>
+	<quest name="The Task Master" startstorageid="2200" startstoragevalue="1">
+		<mission name="Task Boss Status" storageid="2380" startvalue="0" endvalue="2">
+			<missionstate id="0" description="You are not up to a task boss."/>
+			<missionstate id="1" description="You have been asked to kill your current tasks boss."/>
+			<missionstate id="2" description="You have killed your current tasks boss, return to Task Master Greg."/>
+		</mission>
+		<mission name="Call me Greg" storageid="2200" startvalue="0" endvalue="100">
+			<missionstate id="0" description="You are not on a task."/>
+			<missionstate id="1" description="You have been asked to kill 100 rotworms."/>
+			<missionstate id="2" description="You have been asked to kill 100 trolls."/>
+			<missionstate id="3" description="You have been asked to kill 100 dragons."/>
+			<missionstate id="4" description="You have been asked to kill 100 dragon lords."/>
+			<missionstate id="5" description="You have been asked to kill 100 minotaurs."/>
+			<missionstate id="6" description="You have been asked to kill 100 apes."/>
+			<missionstate id="7" description="You have been asked to kill 100 mutants."/>
+			<missionstate id="8" description="You have been asked to kill 100 heros."/>
+			<missionstate id="9" description="You have been asked to kill 100 hydras."/>
+			<missionstate id="10" description="You have been asked to kill 100 demons."/>
+			<missionstate id="11" description="You have been asked to kill 100 drakens."/>
+			<missionstate id="12" description="You have been asked to kill 100 bog raiders."/>
+		</mission>
+		<mission name="Tasks Completed" storageid="2202" startvalue="0" endvalue="9999">
+			<missionstate id="0" description="0"/>
+			<missionstate id="1-9999" description="You have completed |STATE| tasks."/>
+
+		</mission>
+		<mission name="Monsters killed for current task" storageid="2201" startvalue="0" endvalue="100">
+			<missionstate id="0" description="You haven't killed any."/>
+			<missionstate id="1-100" description="You have killed |STATE| monsters for your current task."/>
+		</mission>
+	</quest>
+	<quest name="Medicine Pouches" startstorageid="2310" startstoragevalue="1">
+		<mission name="Handed In" storageid="2310" startvalue="0" endvalue="9999">
+			<missionstate id="0" description="You have not handed in any medicine pouches."/>
+			<missionstate id="1" description="You have handed in 1 medicine pouch."/>
+			<missionstate id="2-9999" description="You have handed in |STATE| medicine pouches."/>
+		</mission>
+	</quest>
+	<!-- quest name="Kill Counter" startstorageid="2500" startstoragevalue="1">
+		<mission name="Demons" storageid="2501" startvalue="0" endvalue="9999">
+			<missionstate id="0" description="You have not killed any demons yet."/>
+			<missionstate id="1" description="You have killed 1 demon."/>
+			<missionstate id="2-9999" description="You have killed |STATE| demons."/>
+		</mission>
+		<mission name="Hydras" storageid="2502" startvalue="0" endvalue="9999">
+			<missionstate id="0" description="You have not killed any hydras yet."/>
+			<missionstate id="1" description="You have killed 1 hydra."/>
+			<missionstate id="2-9999" description="You have killed |STATE| hydras."/>
+		</mission>
+		<mission name="Dragon Lords" storageid="2503" startvalue="0" endvalue="9999">
+			<missionstate id="0" description="You have not killed any dragon lords yet."/>
+			<missionstate id="1" description="You have killed 1 dragon lord."/>
+			<missionstate id="2-9999" description="You have killed |STATE| dragon lords."/>
+		</mission>
+		<mission name="Dragons" storageid="2504" startvalue="0" endvalue="9999">
+			<missionstate id="0" description="You have not killed any dragons yet."/>
+			<missionstate id="1" description="You have killed 1 dragon."/>
+			<missionstate id="2-9999" description="You have killed |STATE| dragons."/>
+		</mission>
+		<mission name="Rotworms" storageid="2505" startvalue="0" endvalue="9999">
+			<missionstate id="0" description="You have not killed any rotworms yet."/>
+			<missionstate id="1" description="You have killed 1 rotworm."/>
+			<missionstate id="2-9999" description="You have killed |STATE| rotworms."/>
+		</mission>
+		<mission name="Swamp Troll" storageid="2506" startvalue="0" endvalue="9999">
+			<missionstate id="0" description="You have not killed any swamp trolls yet."/>
+			<missionstate id="1" description="You have killed 1 swamp troll."/>
+			<missionstate id="2-9999" description="You have killed |STATE| swamp trolls."/>
+		</mission>
+		<mission name="Witches" storageid="2507" startvalue="0" endvalue="9999">
+			<missionstate id="0" description="You have not killed any witches yet."/>
+			<missionstate id="1" description="You have killed 1 witch."/>
+			<missionstate id="2-9999" description="You have killed |STATE| witches."/>
+		</mission>
+		<mission name="Nightmares" storageid="2508" startvalue="0" endvalue="9999">
+			<missionstate id="0" description="You have not killed any nightmares yet."/>
+			<missionstate id="1" description="You have killed 1 nightmare."/>
+			<missionstate id="2-9999" description="You have killed |STATE| nightmares."/>
+		</mission>
+		<mission name="Stampors" storageid="2379" startvalue="0" endvalue="9999">
+			<missionstate id="0" description="You have not killed any stampors yet."/>
+			<missionstate id="1" description="You have killed 1 stampor."/>
+			<missionstate id="2-9999" description="You have killed |STATE| stampors."/>
+		</mission>
+		<mission name="Yielothaxs" storageid="2606" startvalue="0" endvalue="9999">
+			<missionstate id="0" description="You have not killed any yielothaxs yet."/>
+			<missionstate id="1" description="You have killed 1 yielothax."/>
+			<missionstate id="2-9999" description="You have killed |STATE| yielothaxs."/>
+		</mission>
+	</quest -->
+</quests>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Class Trainer Simon" script="data/npc/scripts/class trainer simon.lua" walkinterval="0" floorchange="0" direction="1">
+    <health now="100" max="100"/>
+    <look type="335" head="21" body="87" legs="107" feet="95" addons="3"/>
+   <flags>
+    <flag pushable="0"/>
+  </flags>
+    <parameters>
+        <parameter key="message_greet" value="Greetings, |PLAYERNAME|!"/>
+        <parameter key="message_farewell" value="Good bye, |PLAYERNAME|!"/>
+        <parameter key="module_keywords" value="1" />
+        <parameter key="keywords" value="job;" />
+        <parameter key="keyword_reply1" value="I can train players of level 20 or higher to their promoted status." />
+    </parameters>
+</npc>

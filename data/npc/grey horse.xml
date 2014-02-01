@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Grey Mare" script="data/npc/scripts/grey_horse.lua" walkinterval="0" floorchange="0" direction="1">
+	<health now="100" max="100"/>
+	<look type="434" head="97" body="98" legs="113" feet="114" corpse="2212"/>
+	<parameters>
+
+	</parameters>
+</npc>

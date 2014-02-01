@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="black knight" nameDescription="a black knight" race="blood" experience="1600" speed="340" manacost="0">
+  <health now="1800" max="1800"/>
+  <look type="131" head="95" body="95" legs="95" feet="95" addons="3" corpse="6080"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="80" attack="70"/>
+    <attack name="physical" interval="2000" chance="20" range="7" min="-65" max="-145">
+      <attribute key="shootEffect" value="spear"/>
+    </attack>
+<attack name="melee" interval="2000" chance="15" range="7" radius="3" target="0" min="-80" max="-155">
+  <attribute key="areaEffect" value="blackspark"/>
+</attack>
+  </attacks>
+  <defenses armor="25" defense="30"/>
+    <elements>
+  <element firePercent="95"/>
+	  <element energyPercent="80"/>
+	    <element deathPercent="20"/>
+		  <element physicalPercent="25"/>
+		    <element holyPercent="-10"/>
+	</elements>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="1"/>
+    <immunity fire="1"/>
+    <immunity poison="1"/>
+    <immunity lifedrain="0"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="MINE!" yell="1"/>
+    <voice sentence="NO PRISONERS!" yell="1"/>
+    <voice sentence="NO MERCY!" yell="1"/>
+    <voice sentence="By Bolg's Blood!"/>
+    <voice sentence="You're no match for me!"/>
+  </voices>
+  <loot>
+	<item id="2148" countmax="135" chance="59890" /> -- GP
+	<item id="2389" countmax="3" chance="55850" /> -- Spear
+	<item id="2489" chance="27450" /> -- Dark Armor
+	<item id="2417" chance="22550" /> -- Battle Hammer
+	<item id="2490" chance="18750" /> -- Dark Helmet
+	<item id="2381" chance="15780" /> -- Halberd
+	<item id="2463" chance="13550" /> -- Plate Armor
+	<item id="2387" chance="11580" /> -- Double Axe
+	<item id="2120" chance="10110" /> -- Rope
+	<item id="2691" countmax="2" chance="9880" /> -- Brown Bread
+	<item id="2478" chance="9420" /> -- Brass Legs
+	<item id="2457" chance="9020" /> -- Steel Helmet
+	<item id="2377" chance="8570" /> -- Two Handed Sword
+	<item id="2430" chance="7500" /> -- Knight Axe
+	<item id="2414" chance="4900" /> -- Dragon Lance
+	<item id="7895" chance="4550" /> -- Lightning Legs
+	<item id="2114" chance="1150" /> -- Piggy Bank
+	<item id="2195" chance="555" /> -- BoH
+  </loot>
+</monster>

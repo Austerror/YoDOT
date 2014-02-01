@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Skeleton Warrior" nameDescription="a skeleton warrior" race="undead" experience="45" speed="180" manacost="350">
+  <health now="65" max="65"/>
+  <look type="298" corpse="2843"/>
+  <targetchange interval="2000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="1"/>
+    <flag pushable="0"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+      <attack name="melee" interval="2000" min="-10" max="-40"/>
+      <attack name="lifedrain" interval="2000" min="-5" max="-17">
+             <attribute key="areaEffect" value="redshimmer"/>
+			 </attack>
+  </attacks>
+  <defenses armor="2" defense="9"/>
+	<elements>
+		<element holyPercent="10"/>
+	</elements>
+  <immunities>
+    <immunity death="1"/>
+  </immunities>
+  <loot>
+    <item id="2148" countmax="15" chance="41900" /> -- Gold Coin
+    <item id="2230" chance="50180" /> -- Bone
+	<item id="2787" countmax="3" chance="23870" /> -- White Mushroom
+	<item id="12437" chance="10230"/> -- Pelvis Bone
+	<item id="2789" chance="2070" /> -- Brown Mushroom
+	<item id="2398" chance="1830" /> --Mace
+    <item id="2376" chance="1460" /> -- Sword
+	<item id="2050" chance="1250"/> -- Torch
+	<item id="2511" chance="950"/> -- Brass Shield
+  </loot>
+</monster>
+ 

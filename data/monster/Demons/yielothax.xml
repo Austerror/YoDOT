@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Yielothax" nameDescription="a Yielothax" race="blood" experience="1250" speed="230" manacost="0">
+	<health now="1500" max="1500"/>
+	<look type="408" corpse="13752"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="75" attack="45"/>
+		<attack name="lifedrain" interval="1000" chance="12" length="5" spread="4" min="-60" max="-130">
+			<attribute key="areaEffect" value="purpleenergy"/>
+		</attack>
+		<attack name="earth" interval="1000" chance="12" radius="3" target="0" min="-150" max="-250">
+		  <attribute key="areaEffect" value="poison"/>
+		</attack>
+		<attack name="manadrain" interval="2000" chance="13" length="4" spread="3" min="-50" max="-150"/>
+		<attack name="lifedrain" interval="2000" chance="12" length="8" spread="0" min="-100" max="-130">
+			<attribute key="areaEffect" value="purpleenergy"/>
+		</attack>
+	</attacks>
+	<defenses armor="50" defense="45">
+		<defense name="healing" interval="2000" chance="15" min="100" max="150">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element physicalPercent="-10"/>
+		<element energyPercent="-5"/>
+		<element icePercent="-5"/>
+		<element firePercent="25"/>
+		<element deathPercent="50"/>
+	</elements>
+	<immunities>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="IIEEH!! Iiih iih ih iiih!!!"/>
+		<voice sentence="Bsssssssm Bssssssm Bsssssssssssm!"/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="230" chance="99810" /> -- Gold Coins
+		<item id="7589" chance="20260"/> -- SMP
+		<item id="7588" chance="20160"/> -- SHP
+		<item id="2789" countmax="3" chance="9430" /> -- Brown Mushroom
+		<item id="2145" countmax="5" chance="4810" /> -- Small Diamond
+		<item id="2164" chance="3970"/> -- might ring
+		<item id="7889" chance="920"/> -- lightning pendant
+		<item id="2151" chance="860" /> -- Talon
+		<item id="2438" chance="630" /> -- Epee
+		<item id="10221" chance="560" /> -- Shockwave Amulet
+		<item id="7895" chance="520" /> -- Lightning Legs
+		<item id="7440" chance="460" /> -- Mastermind Potion
+		<item id="2189" chance="390" /> -- Wand of Cosmic Energy
+		<item id="13942" chance="360" /> -- Yielocks
+		<item id="13877" chance="290" /> -- Broken Ring of Ending
+		<item id="13881" chance="290" /> -- Yielowax
+	</loot>
+</monster>

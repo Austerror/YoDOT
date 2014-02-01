@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Minotaur Guard" nameDescription="a minotaur guard" race="blood" experience="160" speed="190" manacost="550">
+  <health now="185" max="185"/>
+  <look type="29" head="20" body="30" legs="40" feet="50" corpse="5983"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="50" attack="35"/>
+  </attacks>
+  <defenses armor="15" defense="25"/>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="0"/>
+    <immunity lifedrain="0"/>
+    <immunity paralyze="0"/>
+    <immunity outfit="0"/>
+    <immunity drunk="0"/>
+    <immunity invisible="0"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="Kirll Karrrl!"/>
+    <voice sentence="Kaplar!"/>
+  </voices>
+  <loot>
+    <item id="2148" countmax="20" chance="59760" /> -- GP
+	<item id="12428" countmax="2" chance="8220"/> -- Minotaur Horn
+	<item id="12438" chance="5320"/> -- Piece of Warrior Armor
+	<item id="2465" chance="4490"/> -- Brass Armor
+	<item id="2464" chance="2970"/> -- Chain Armor
+	<item id="2513" chance="2090"/> -- Battle Shield
+	<item id="5878" chance="890" /> -- Minotaur Leather
+	<item id="2580" chance="550"/> -- Fishing Rod
+	<item id="2387" chance="410"/> -- Double Axe
+	<item id="7618" chance="380"/> -- Health Potion
+	<item id="7401" chance="70"/> -- Minotaur Trophy
+  </loot>
+</monster>

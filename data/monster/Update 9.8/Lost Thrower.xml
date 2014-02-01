@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Lost Thrower" nameDescription="a lost thrower" race="blood" experience="1200" speed="210" manacost="0">
+	<health now="1700" max="1700"/>
+	<look type="539" corpse="19998"/>
+	<targetchange interval="3000" chance="5"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag staticattack="95"/>
+		<flag lightlevel="0"/>
+		<flag lightcolor="0"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-1" max="-300"/>
+		<attack name="physical" interval="2000" chance="22" range="5" radius="3" target="1" min="-150" max="-300">
+		  <attribute key="shootEffect" value="LARGEROCK"/>
+		  <attribute key="areaEffect" value="SMOKE"/>
+		</attack>
+		<attack name="drunk" interval="2000" chance="8" range="5" target="1" radius="3" duration="15000">
+			<attribute key="areaeffect" value="redshimmer"/>
+		</attack>
+		<attack name="physical" interval="2000" chance="34" range="7" radius="1" target="1" min="-150" max="-250">
+			<attribute key="shootEffect" value="WHIRLWINDAXE"/>
+		</attack>
+	</attacks>
+	<defenses armor="35" defense="35">
+		<defense name="invisible" interval="1000" chance="25" duration="9000">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="healing" interval="1000" chance="25" min="100" max="500">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+
+	</elements>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="2000" chance="5">
+
+	</voices>
+	<loot>
+		<item id="2148" countmax="100" chance="100000" /> <!-- Gold Coin -->
+		<item id="2148" countmax="37" chance="100000" /> <!-- Gold Coin -->
+		<item id="2152" chance="69450" /> <!-- Platinum Coin -->
+		<item id="20131" chance="15000" /> <!-- Broken Throwing Axe -->
+		<item id="7591" chance="15000" /> <!-- Great Health Potion -->
+		<item id="20134" chance="14850" /> <!-- Mad Froth -->
+		<item id="20133" chance="13920" /> <!-- Lost Bracers -->
+		<item id="2789" countmax="2" chance="13610" /> <!-- Brown Mushroom -->
+		<item id="7590" chance="13300" /> <!-- Great Mana Potion -->
+		<item id="20107" chance="12300" /> <!-- Bloody Dwarven Beard -->
+		<item id="13757" chance="11520" /> <!-- Coal -->
+		<item id="20135" chance="11290" /> <!-- Red Hair Dye -->
+		<item id="5880" chance="10440" /> <!-- Iron Ore -->
+		<item id="20137" chance="8280" /> <!-- Basalt Figurine -->
+		<item id="20136" chance="5490" /> <!-- Basalt Fetish -->
+		<item id="20132" chance="1620" /> <!-- Helmet of the Lost -->
+		<item id="20109" chance="850" /> <!-- Buckle -->
+	</loot>
+</monster>

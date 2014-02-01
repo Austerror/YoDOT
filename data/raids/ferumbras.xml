@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raid>
+	<announce delay="1000" type="Event" message="From within the Maelstrom Ferumbras can be heard chuckling!" />
+	<announce delay="30000" type="Event" message="Ferumbras return is at hand. Thanian Academy calls for Heroes to fight that evil!" />
+	<announce delay="60000" type="Event" message="The Maelstrom groans in preparation for Ferumbras return!" />
+	<announce delay="119000" type="Event" message="Ferumbras has returned to his throne in the Maelstrom!" />
+	<singlespawn delay="120000" name="Ferumbras" ref="yes" x="1132" y="1030" z="13"/>
+</raid>

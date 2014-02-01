@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="pirate cutthroat" nameDescription="a pirate cutthroat" race="blood" experience="175" speed="230" manacost="495">
+  <health now="325" max="325"/>
+  <look type="96" head="0" body="0" legs="0" feet="0" corpse="6080"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="0"/>
+    <flag staticattack="90"/>
+    <flag targetdistance="1"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="60" attack="55"/>
+    <attack name="fire" interval="1500" chance="13" range="1" radius="1" target="1" min="-0" max="-90">
+		<attribute key="areaEffect" value="explosion"/>
+    </attack>
+  </attacks>
+  <defenses armor="25" defense="23"/>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="0"/>
+    <immunity lifedrain="0"/>
+    <immunity paralyze="0"/>
+    <immunity outfit="0"/>
+    <immunity drunk="0"/>
+    <immunity invisible="0"/>
+  </immunities>
+  <loot>
+    <item id="2148" countmax="48" chance="77730" /> -- GP
+	<item id="11219" chance="10190" /> -- Compass
+    <item id="2483" chance="3220" /> -- Scale Armor
+	<item id="2509" chance="2760" /> -- Steel Shield
+	<item id="5710" chance="1960" /> -- Light Shovel
+	<item id="5927" chance="1020" /> -- Pirate Bag
+	<item id="5091" chance="970" /> -- Treasure Map
+    <item id="5918" chance="940"/> -- Pirate Knee Breeches
+	<item id="6097" chance="550" /> -- Hook
+	<item id="6126" chance="510" /> -- Peg Leg
+	<item id="6098" chance="460" /> -- Eye Patch
+	<item id="5792" chance="90" /> -- Dice
+	<item id="5553" chance="90" /> -- Rum Flask
+  </loot>
+</monster>

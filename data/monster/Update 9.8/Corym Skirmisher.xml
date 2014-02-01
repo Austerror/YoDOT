@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Corym Skirmisher" nameDescription="a corym skirmisher" race="blood" experience="260" speed="180" manacost="0">
+	<health now="450" max="450"/>
+	<look type="533" head="76" body="76" legs="76" feet="76" corpse="19726"/>
+	<targetchange interval="3000" chance="5"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag staticattack="95"/>
+		<flag lightlevel="0"/>
+		<flag lightcolor="0"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="physical" range="1" interval="2000" min="-1" max="-110"/>
+		<attack name="physical" interval="2000" chance="34" range="7" radius="1" target="1" min="-1" max="-90">
+			<attribute key="shootEffect" value="WHIRLWINDAXE"/>
+		</attack>
+	</attacks>
+	<defenses armor="18" defense="18" />
+	<elements>
+		<element deathPercent="-20"/>
+		<element energyPercent="-20"/>
+		<element earthPercent="-20"/>
+		
+		<element holyPercent="20"/>
+	</elements>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="2000" chance="5">
+		<voice sentence="Squeak! Squeak!" />
+		<voice sentence="&lt;sniff&gt; &lt;sniff&gt; &lt;sniff&gt;" />
+	</voices>
+	<loot>
+		<item id="2148" countmax="45" chance="78730" /> <!-- Gold Coin -->
+		<item id="8368" chance="20330" /> <!-- Cheese -->
+		<item id="20101" chance="18190" /> <!-- Rat Cheese -->
+		<item id="20100" chance="15050" /> <!-- Soft Cheese -->
+		<item id="20097" chance="9220" /> <!-- Cheese Cutter -->
+		<item id="20099" chance="9070" /> <!-- Earflap -->
+		<item id="20089" chance="8180" /> <!-- Bola -->
+		<item id="20093" chance="3060" /> <!-- Life Preserver -->
+		<item id="20092" chance="2660" /> <!-- Ratana -->
+		<item id="20098" chance="820" /> <!-- Cheesy Figurine -->
+		<item id="20090" chance="650" /> <!-- Spike Shield -->
+		<item id="20126" chance="490" /> <!-- Leather Harness -->
+		<item id="20105" chance="10" /> <!-- Rat God Doll -->
+	</loot>
+</monster>

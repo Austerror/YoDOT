@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Lizard Zaogun" nameDescription="a lizard zaogun" race="blood" experience="1700" speed="420" manacost="0">
+<health now="2955" max="2955"/>
+<look type="343" corpse="11278"/>
+<targetchange interval="5000" chance="8"/>
+<strategy attack="100" defense="0"/>
+<flags>
+<flag summonable="0"/>
+<flag attackable="1"/>
+<flag hostile="1"/>
+<flag illusionable="1"/>
+<flag convinceable="0"/>
+<flag pushable="0"/>
+<flag canpushitems="1"/>
+<flag canpushcreatures="0"/>
+<flag targetdistance="1"/>
+<flag staticattack="90"/>
+<flag runonhealth="150"/>
+</flags>
+<attacks>
+<attack name="melee" interval="2000" skill="55" attack="88"/>
+<attack name="poison" interval="2000" chance="12" range="1" radius="1" target="1" min="-0" max="-250">
+<attribute key="areaEffect" value="poison"/>
+</attack>
+</attacks>
+	<defenses armor="35" defense="35">
+		<defense name="healing" interval="1000" chance="18" min="200" max="400">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+<defense name="invisible" interval="5000" chance="20" duration="5000">
+<attribute key="areaEffect" value="redshimmer"/>
+</defense>
+	</defenses>
+<elements>
+<element physicalPercent="5"/>
+<element holyPercent="1"/>
+<element deathPercent="10"/>
+<element firePercent="45"/>
+<element energyPercent="20"/>
+<element icePercent="15"/>
+<element earthPercent="35"/>
+</elements>
+<immunities>
+<immunity earth="1"/>
+<immunity invisible="1"/>
+</immunities>
+<loot>
+	<item id="2148" countmax="231" chance="99450"/> -- GP
+	<item id="11331" chance="12820"/> -- Zaogun Shoulderpads
+	<item id="7591" countmax="3" chance="7180"/> -- GHP
+	<item id="5881" countmax="1" chance="7070"/> -- Lizard Scale
+	<item id="11330" chance="5460"/> -- Zaogun Flag
+	<item id="2152" countmax="2" chance="5200"/> -- PP
+	<item id="2149" countmax="5" chance="2860"/> -- Small Emeralds
+	<item id="7588" countmax="1" chance="2510"/> -- SHP
+	<item id="11206" chance="2400"/> -- Red Lantern
+	<item id="2528" chance="1090"/> -- Tower Shield
+	<item id="11303" chance="980"/> -- Zaoan Shoes
+	<item id="11304" chance="940"/> -- Zaoan Legs
+	<item id="5876" countmax="1" chance="830"/> -- Lizard Leather
+	<item id="11301" chance="410"/> -- Zaoan Armor
+</loot>
+</monster>

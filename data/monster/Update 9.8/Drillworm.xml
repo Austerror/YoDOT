@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Drillworm" nameDescription="a drillworm" race="undead" experience="1100" speed="" manacost="0">
+	<health now="1500" max="1500"/>
+	<look type="527" corpse=""/>
+	<targetchange interval="3000" chance="5"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag staticattack="95"/>
+		<flag lightlevel="0"/>
+		<flag lightcolor="0"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+	</attacks>
+	<defenses armor="" defense="">
+	</defenses>
+	<elements>
+		<element icePercent=""/>
+		<element firePercent=""/>
+		<element earthPercent=""/>
+		<element holyPercent=""/>
+		<element energyPercent=""/>
+		<element deathPercent=""/>
+	</elements>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="2000" chance="5">
+		<voice sentence=""/>
+	</voices>
+	<loot>
+		<item id="2148" countmax="100" chance="100000" /> <!-- Gold Coin -->
+<item id="2148" countmax="50" chance="100000" /> <!-- Gold Coin -->
+<item id="11222" chance="14440" /> <!-- Lump of Earth -->
+<item id="13757" chance="12530" /> <!-- Coal -->
+<item id="18418" chance="10040" /> <!-- Blue Crystal Splinter -->
+<item id="18416" chance="9330" /> <!-- Green Crystal Splinter -->
+<item id="18417" chance="8890" /> <!-- Brown Crystal Splinter -->
+<item id="18429" chance="8270" /> <!-- Vein of Ore -->
+<item id="18427" chance="6000" /> <!-- Pulverized Ore -->
+<item id="18436" countmax="2" chance="5160" /> <!-- Drill Bolt -->
+<item id="2553" chance="4890" /> <!-- Pick -->
+<item id="3976" countmax="5" chance="4710" /> <!-- Worm -->
+<item id="7887" chance="2840" /> <!-- Terra Amulet -->
+<item id="2215" chance="2310" /> <!-- Dwarven Ring -->
+<item id="5880" chance="1870" /> <!-- Iron Ore -->
+<item id="11339" chance="840" /> <!-- Clay Lump -->
+<item id="7452" chance="620" /> <!-- Spiked Squelcher -->
+	</loot>
+</monster>

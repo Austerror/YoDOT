@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <monster name="Essbend" nameDescription="Essbend" race="venom" experience="1400" speed="250" manacost="0">
+    <health now="2200" max="2200"/>
+    <look type="299" corpse="8951"/>
+    <targetchange interval="60000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+      <flag summonable="0"/>
+      <flag attackable="1"/>
+      <flag hostile="1"/>
+      <flag illusionable="0"/>
+      <flag convinceable="0"/>
+      <flag pushable="0"/>
+      <flag canpushitems="1"/>
+      <flag staticattack="83"/>
+      <flag lightlevel="0"/>
+      <flag lightcolor="0"/>
+      <flag targetdistance="1"/>
+      <flag runonhealth="1"/>
+    </flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="65" attack="75" poison="40"/>
+		<attack name="lifedrain" interval="2000" chance="14" min="-140" max="-210">
+            <attribute key="areaEffect" value="redshimmer"/>
+		</attack>
+		<attack name="earth" interval="2000" chance="8" radius="3" target="0" min="-130" max="-215">
+            <attribute key="areaEffect" value="stones"/>
+		</attack>
+        <attack name="speed" interval="3000" chance="20" target="1" duration="12000" speedchange="-600">
+            <attribute key="areaEffect" value="redshimmer"/>
+		</attack>
+	</attacks>
+	<defenses armor="10" defense="15">
+		<defense name="haste" interval="10000" chance="40">
+            <attribute key="areaEffect" value="greenshimmer"/>
+		</defense>
+		<defense name="healing" interval="5000" chance="15" min="100" max="150">
+            <attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+	    <element physicalPercent="-20"/>
+		<element energyPercent="-10"/>
+		<element earthPercent="30"/>
+		<element icePercent="-5"/>
+		<element holyPercent="-5"/>
+		<element deathPercent="5"/>
+		<element firePercent="15"/>
+	</elements>
+    <immunities>
+      <immunity paralyze="1"/>
+      <immunity invisible="1"/>
+    </immunities>
+    <voices interval="2000" chance="5">
+      <voice sentence="Tchhh!"/>
+      <voice sentence="Slurp!"/>
+	  <voice sentence="Organic orgasmic!"/>
+    </voices>
+  <loot>
+    <item id="2152" countmax="14" chance="91990" /> -- PP
+	<item id="2150" countmax="8" chance="75000" /> -- Small Amethyst
+	<item id="2149" countmax="8" chance="75000" /> -- Small Emerald
+	<item id="10584" chance="100000"/> -- Boggy Dreads
+	<item id="7588" countmax="5" chance="55000" /> -- SHP
+	<item id="2142" chance="15000"/> -- Ancient Amulet
+	<item id="8912" chance="15000"/> -- Springsprout Rod
+	<item id="2476" chance="12500"/> -- K Arm
+	<item id="7426" chance="12500"/> -- Amber Staff
+	<item id="2540" chance="12500"/> -- Scarab Shield
+	<item id="7884" chance="12500"/> -- Terra Mantle
+	<item id="12424" chance="4200"/> -- ornamented brooch
+	<item id="8872" chance="4200"/> -- Belted Cape
+	<item id="8891" chance="4200"/> -- paladin armor
+  </loot>
+</monster>

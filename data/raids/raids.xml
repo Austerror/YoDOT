@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raids>
+	<!--
+		executed on average once every 2 minutes
+
+		<raid name="Example" file="example.xml" interval2="2" margin="0" reftype="single" ref="no"/>
+			won't be executed again till Cave Rat gets killed
+
+		<raid name="Example2" file="example.xml" interval2="2" margin="0" reftype="block" ref="no"/>
+			will stay as 'running' until Cave Rat gets killed
+	-->
+	
+	<raid name="Midnight Panther" 	file="midnight panther.xml" 	interval2="240" chance="1" margin="30" reftype="single" ref="yes" />
+	<raid name="Ferumbras" 			file="ferumbras.xml" 			interval2="600" chance="1" margin="30" reftype="single" ref="yes" />
+	<raid name="Insectoid Scout" 	file="insectoid scouts.xml" 	interval2="360" chance="2" margin="30" reftype="single" ref="yes" />
+	<raid name="Tanjis" 			file="tanjis.xml" 				interval2="600" chance="3" margin="30" reftype="single" ref="yes" />
+</raids>
+<!-- raid name="Morgaroth" file="morgaroth.xml" interval2="600" chance="3" margin="30" reftype="single" ref="yes" / -->
+<!-- raid name="Orshabaal" file="orshabaal.xml" interval2="600" chance="1" margin="30" reftype="single" ref="yes" / -->

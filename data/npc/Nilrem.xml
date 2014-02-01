@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Nilrem" script="data/npc/scripts/nilrem.lua" walkinterval="0" floorchange="0" direction="1">
+	<health now="100" max="100"/>
+	<look type="130" head="38" body="95" legs="50" feet="114" addons="3" corpse="2212"/>
+	<flags>
+		<flag pushable="0"/>
+	</flags>
+	<parameters>
+		<parameter key="message_greet" value="Welcome to my shack |PLAYERNAME|. What brings you here today?"/>
+	</parameters>
+</npc>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Brother Daniel" nameDescription="brother daniel" race="undead" experience="1200" speed="180" manacost="0">
+	<health now="1200" max="1200"/>
+	<look type="278" head="78" body="116" legs="95" feet="121" addons="3" mount="372" corpse="9772"/>
+	<targetchange interval="500" chance="25"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="4"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="150"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="50" attack="40"/>
+		<attack name="fire" interval="1000" chance="10" range="7" radius="4" target="1" min="-150" max="-220">
+			<attribute key="shootEffect" value="fire"/>
+			<attribute key="areaEffect" value="firearea"/>
+		</attack>
+		<attack name="physical" interval="1000" chance="34" range="7" min="-155" max="-185">
+			<attribute key="shootEffect" value="largerock"/>
+		</attack>
+		<attack name="manadrain" interval="2000" chance="25" range="7" min="-100" max="-130"/>
+	</attacks>
+	<defenses armor="17" defense="15">
+		<defense name="healing" interval="2000" chance="50" min="125" max="275">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element earthPercent="20"/>
+		<element firePercent="20"/>
+		<element energyPercent="20"/>
+		<element holyPercent="-20"/>
+		<element icePercent="20"/>
+		<element deathPercent="20"/>
+	</elements>
+	<immunities>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Shred it!."/>
+		<voice sentence="You have it coming!"/>
+		<voice sentence="Don't just stand there, do something!"/>
+	</voices>
+</monster>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="" nameDescription="" race="undead" experience="" speed="" manacost="">
+	<health now="" max=""/>
+	<look type="" corpse=""/>
+	<targetchange interval="3000" chance="5"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="1"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="95"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+	</attacks>
+	<defenses armor="" defense="">
+	</defenses>
+	<elements>
+	</elements>
+	<immunities>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence=""/>
+	</voices>
+	<loot>
+	<item id="2148" countmax="100" chance="71590" /> <!-- Gold Coin -->
+<item id="2148" countmax="44" chance="100000" /> <!-- Gold Coin -->
+<item id="13739" chance="26670" /> <!-- Hieroglyph Banner -->
+<item id="7620" chance="15630" /> <!-- Mana Potion -->
+<item id="7618" chance="15260" /> <!-- Health Potion -->
+<item id="2159" countmax="3" chance="10300" /> <!-- Scarab Coin -->
+<item id="2217" chance="6080" /> <!-- Spellbook -->
+<item id="5022" countmax="4" chance="5830" /> <!-- Orichalcum Pearl -->
+<item id="2143" chance="3350" /> <!-- White Pearl -->
+<item id="2216" chance="1120" /> <!-- Ring of Healing -->
+	</loot>
+</monster>

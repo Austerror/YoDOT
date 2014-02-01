@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="crypt shambler" nameDescription="a crypt shambler" race="UNDEAD" experience="195" speed="180" manacost="0">
+  <health now="330" max="330"/>
+  <look type="100" head="20" body="30" legs="40" feet="50" corpse="6029"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="60" attack="39"/>
+    <attack name="lifedrain" interval="1000" chance="13" range="1" min="-25" max="-55"/>
+  </attacks>
+  <defenses armor="15" defense="10"/>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="1"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="0"/>
+    <immunity drunk="0"/>
+    <immunity invisible="0"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="Uhhhhhhh!"/>
+    <voice sentence="Aaaaahhhh!"/>
+    <voice sentence="Hoooohhh!"/>
+    <voice sentence="Chhhhhhh!"/>
+  </voices>
+  <loot>
+	<item id="2148" countmax="55" chance="56190" /> -- GP
+	<item id="3976" countmax="10" chance="9070" /> -- Worms
+    <item id="11200" chance="8333"/> -- half-digested piece of meat
+	<item id="2230" chance="4590"/> -- Bone
+	<item id="2459" chance="2150"/> --  Iron Helmet
+	<item id="2377" chance="1950"/> -- two handed sword
+	<item id="2227" chance="1710"/> -- Rotten Meat
+	<item id="2541" chance="1090"/> -- Bone Shield
+	<item id="2399" countmax="3" chance="1050" /> -- Throwing Star
+	<item id="2450" chance="1050"/> -- Bone Sword
+	<item id="2145" countmax="2" chance="620" /> -- Small Diamond
+  </loot>
+</monster>

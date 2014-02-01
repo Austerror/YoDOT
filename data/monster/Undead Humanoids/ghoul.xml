@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="ghoul" nameDescription="a ghoul" race="blood" experience="85" speed="144" manacost="450">
+  <health now="100" max="100"/>
+  <look type="18" head="20" body="30" legs="40" feet="50" corpse="5976"/>
+  <targetchange interval="2000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="30" attack="32"/>
+    <attack name="lifedrain" interval="1000" chance="11" range="1" min="-15" max="-25"/>
+  </attacks>
+  <defenses armor="8" defense="17">
+    <defense name="healing" interval="1000" chance="13" min="9" max="15">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <elements>
+  <element earthPercent="20"/>
+  <element holyPercent="-25"/>
+  <element icePercent="10"/>
+  <element energyPercent="30"/>
+  </elements>
+  <immunities>
+    <immunity death="1"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <loot>
+    <item id="2148" countmax="30" chance="67610" /> -- GP
+	<item id="11208" chance="14500"/> -- Rotten Piece of Cloth
+    <item id="3976" countmax="2" chance="9310" /> -- Worm
+	<item id="12423" chance="5210"/> -- Ghoul Snack
+	<item id="2050" chance="4990"/> -- Torch
+	<item id="2483" chance="1060"/> -- Scale Armor
+	<item id="5913" chance="1010" /> -- Brown PoC
+	<item id="2473" chance="990"/> -- Viking Helmet
+	<item id="12440" chance="910"/> -- Pile of Grave Earth
+	<item id="2229" chance="250" /> -- Skull
+	<item id="2168" chance="190"/> -- Life Ring
+    <item id="2050" chance="20000"/>
+  </loot>
+</monster>
