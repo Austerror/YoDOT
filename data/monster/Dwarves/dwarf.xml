@@ -24,7 +24,7 @@
     <elements>
 		<element firePercent="-5"/>
 		<element earthPercent="10"/>
-		<element deathPercent="-4"/>
+		<element deathPercent="-5"/>
 	</elements>
 	<immunities>
 	</immunities>
@@ -32,18 +32,15 @@
 		<voice sentence="Hail Durin!"/>
 	</voices>
   <loot>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="2148" countmax="15" chance1="100000" chancemax="0"/>
-    <item id="2388" chance="6666"/>
-    <item id="2386" chance="5000"/>
-    <item id="2484" chance="20000"/>
-    <item id="2530" chance="6666"/>
-    <item id="2649" chance="10000"/>
-    <item id="5880" chance="2500" countmax="2" /> -- iron ore
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2787" countmax="2" chance1="20000" chancemax="0"/>
-      </inside>
-    </item>
+	<item id="2787" chance="50850"/> -- White Mushroom
+	<item id="2148" countmax="8" chance1="35260" chancemax="0"/> -- Gold Coin
+	<item id="2388" chance="25300"/> -- Hatchet
+	<item id="2386" chance="14330"/> -- Axe
+	<item id="2530" chance="10380"/> -- Copper Shield
+	<item id="2553" chance="10120"/> -- Pick
+	<item id="2649" chance="9560"/> -- Leather Legs
+	<item id="2484" chance="7890"/> -- Studded Armor
+	<item id="2213" chance="100"/> -- Dwarven Ring
+    <item id="5880" chance="70"/> -- Iron Ore
   </loot>
 </monster>

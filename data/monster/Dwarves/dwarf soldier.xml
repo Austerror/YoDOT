@@ -19,7 +19,7 @@
   </flags>
   <attacks>
     <attack name="melee" interval="2000" skill="40" attack="36"/>
-    <attack name="physical" interval="3000" chance="13" range="7" min="-20" max="-40">
+    <attack name="physical" interval="3000" chance="13" range="7" min="-0" max="-60">
       <attribute key="shootEffect" value="bolt"/>
     </attack>
   </attacks>
@@ -27,7 +27,7 @@
   <elements>
 	<element firePercent="-5"/>
 	<element earthPercent="10"/>
-	<element deathPercent="-4"/>
+	<element deathPercent="-5"/>
   </elements>
   <immunities>
   </immunities>
@@ -35,23 +35,17 @@
     <voice sentence="Hail Durin!"/>
   </voices>
   <loot>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="2148" countmax="15" chance1="100000" chancemax="0"/>
-    <item id="2543" countmax="10" chance1="20000" chancemax="0"/>
-    <item id="2481" chance="10000"/>
-    <item id="2455" chance="10000"/>
-    <item id="2554" chance="3333"/>
-    <item id="2464" chance="20000"/>
-    <item id="2643" chance="25000"/>
-    <item id="2696" chance="15000"/>
-    <item id="7363" countmax="8" chance1="6000" chancemax="0"/>
-    <item id="5880" chance="2500" countmax="2" /> -- iron ore
-    <item id="1987" chance="100000">
-      <inside>
-        <item id="2525" chance="1666"/>
-        <item id="2378" chance="3333"/>
-        <item id="2213" chance="2500"/>
-      </inside>
-    </item>
+	<item id="2787" chance="39840" countmax="2"/> -- White Mushroom
+	<item id="2543" countmax="7" chance1="37610" chancemax="0"/> -- Bolt
+	<item id="2148" countmax="12" chance1="28440" chancemax="0"/> -- Gold Coin
+	<item id="2481" chance="10000"/> -- Soldier Helmet
+	<item id="2554" chance="9900"/> -- Shovel
+	<item id="2464" chance="7440"/> -- Chain Armor
+	<item id="7363" countmax="3" chance1="3820" chancemax="0"/> -- Piercing Bolt
+	<item id="2525" chance="3060"/> -- Dwarven Shield
+	<item id="2455" chance="2920"/> -- Crossbow
+	<item id="2378" chance="3333"/> -- Battle Axe
+	<item id="5880" chance="300"/> -- Iron Ore
+	<item id="2208" chance="120"/> -- Axe Ring
   </loot>
 </monster>
