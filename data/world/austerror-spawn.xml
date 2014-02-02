@@ -1038,7 +1038,7 @@
     <monster name="Centipede" x="-1" y="4" z="7" spawntime="180"/>
   </spawn>
   <spawn centerx="1234" centery="1030" centerz="7" radius="3">
-    <monster name="lizard sentinel" x="-1" y="-1" z="7" spawntime="180"/>
+    <monster name="Lizard Sentinel" x="-1" y="-1" z="7" spawntime="180"/>
     <monster name="Stampor" x="2" y="1" z="7" spawntime="180"/>
   </spawn>
   <spawn centerx="1330" centery="1032" centerz="7" radius="3">
@@ -1090,7 +1090,7 @@
   </spawn>
   <spawn centerx="1230" centery="1042" centerz="7" radius="3">
     <monster name="Stampor" x="2" y="-2" z="7" spawntime="180"/>
-    <monster name="lizard sentinel" x="-1" y="1" z="7" spawntime="180"/>
+    <monster name="Lizard Sentinel" x="-1" y="1" z="7" spawntime="180"/>
     <monster name="Elephant" x="3" y="1" z="7" spawntime="180"/>
   </spawn>
   <spawn centerx="1186" centery="1044" centerz="7" radius="3">
@@ -1107,7 +1107,7 @@
     <monster name="Sibang" x="-2" y="1" z="7" spawntime="180"/>
   </spawn>
   <spawn centerx="1241" centery="1045" centerz="7" radius="3">
-    <monster name="lizard sentinel" x="-1" y="2" z="7" spawntime="180"/>
+    <monster name="Lizard Sentinel" x="-1" y="2" z="7" spawntime="180"/>
     <monster name="Stampor" x="2" y="2" z="7" spawntime="180"/>
   </spawn>
   <spawn centerx="939" centery="1046" centerz="7" radius="3">
@@ -1187,7 +1187,7 @@
     <monster name="White Deer" x="0" y="3" z="7" spawntime="180"/>
   </spawn>
   <spawn centerx="1240" centery="1056" centerz="7" radius="3">
-    <monster name="lizard sentinel" x="-1" y="-2" z="7" spawntime="180"/>
+    <monster name="Lizard Sentinel" x="-1" y="-2" z="7" spawntime="180"/>
     <monster name="Stampor" x="2" y="1" z="7" spawntime="180"/>
   </spawn>
   <spawn centerx="1062" centery="1057" centerz="7" radius="3">
@@ -1323,7 +1323,7 @@
   <spawn centerx="1230" centery="1078" centerz="7" radius="3">
     <monster name="Stampor" x="1" y="-1" z="7" spawntime="180"/>
     <monster name="Elephant" x="3" y="-1" z="7" spawntime="180"/>
-    <monster name="lizard sentinel" x="-2" y="1" z="7" spawntime="180"/>
+    <monster name="Lizard Sentinel" x="-2" y="1" z="7" spawntime="180"/>
   </spawn>
   <spawn centerx="924" centery="1079" centerz="7" radius="3">
     <monster name="Orc Rider" x="-1" y="-1" z="7" spawntime="180"/>
