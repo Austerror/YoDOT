@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
 	<!-- Watering Can -->
-		<action itemid="7734" event="script" value="tools/watering can.lua" />
+	<action uniqueid="2619" script="quests/dwarven_legs_quest.lua"/>
+	<action itemid="7734" event="script" value="tools/watering can.lua" />
 	<action uniqueid="30027" script="quests/tanjis chest.lua"/>
 	<action actionid="30026" script="quests/tanjis switch.lua"/>
 	<action fromid="11339" toid="11341" script="other/lump of clay.lua"/>
