@@ -1921,10 +1921,8 @@
   </spawn>
   <spawn centerx="743" centery="926" centerz="8" radius="5">
     <monster name="Giant Spider" x="-2" y="0" z="8" spawntime="60"/>
-    <monster name="Giant Spider" x="5" y="1" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="799" centery="930" centerz="8" radius="5">
-    <monster name="Giant Spider" x="5" y="1" z="8" spawntime="60"/>
     <monster name="Giant Spider" x="-4" y="4" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="760" centery="933" centerz="8" radius="5">
@@ -1943,14 +1941,10 @@
   </spawn>
   <spawn centerx="732" centery="939" centerz="8" radius="5">
     <monster name="Giant Spider" x="3" y="-4" z="8" spawntime="60"/>
-    <monster name="Giant Spider" x="-2" y="3" z="8" spawntime="60"/>
   </spawn>
-  <spawn centerx="790" centery="940" centerz="8" radius="5">
-    <monster name="Giant Spider" x="-3" y="-1" z="8" spawntime="60"/>
-  </spawn>
+  <spawn centerx="790" centery="940" centerz="8" radius="5"/>
   <spawn centerx="833" centery="940" centerz="8" radius="5">
     <monster name="Giant Spider" x="5" y="-4" z="8" spawntime="60"/>
-    <monster name="Giant Spider" x="-2" y="2" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="857" centery="942" centerz="8" radius="5">
     <monster name="Giant Spider" x="-2" y="-4" z="8" spawntime="60"/>
@@ -1977,7 +1971,6 @@
   </spawn>
   <spawn centerx="851" centery="954" centerz="8" radius="5">
     <monster name="Giant Spider" x="5" y="-3" z="8" spawntime="60"/>
-    <monster name="Giant Spider" x="-1" y="1" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="894" centery="954" centerz="8" radius="3">
     <monster name="Slithid Scout" x="1" y="-1" z="8" spawntime="180"/>
@@ -1997,7 +1990,6 @@
   </spawn>
   <spawn centerx="864" centery="959" centerz="8" radius="5">
     <monster name="Giant Spider" x="-1" y="0" z="8" spawntime="60"/>
-    <monster name="Giant Spider" x="5" y="5" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="954" centery="959" centerz="8" radius="2">
     <monster name="Slithid Scout" x="-1" y="1" z="8" spawntime="180"/>
@@ -2009,7 +2001,6 @@
   <spawn centerx="764" centery="962" centerz="8" radius="5">
     <monster name="Giant Spider" x="-4" y="-4" z="8" spawntime="60"/>
     <monster name="Giant Spider" x="3" y="0" z="8" spawntime="60"/>
-    <monster name="Giant Spider" x="-5" y="5" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="844" centery="962" centerz="8" radius="5">
     <monster name="Giant Spider" x="1" y="-2" z="8" spawntime="60"/>
@@ -2034,7 +2025,6 @@
   </spawn>
   <spawn centerx="721" centery="968" centerz="8" radius="5">
     <monster name="Giant Spider" x="-4" y="-4" z="8" spawntime="60"/>
-    <monster name="Giant Spider" x="4" y="1" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="809" centery="968" centerz="8" radius="5">
     <monster name="Giant Spider" x="1" y="1" z="8" spawntime="60"/>
@@ -2052,12 +2042,9 @@
     <monster name="Giant Spider" x="0" y="-3" z="8" spawntime="60"/>
     <monster name="Giant Spider" x="3" y="5" z="8" spawntime="60"/>
   </spawn>
-  <spawn centerx="771" centery="972" centerz="8" radius="5">
-    <monster name="Giant Spider" x="-2" y="4" z="8" spawntime="60"/>
-  </spawn>
+  <spawn centerx="771" centery="972" centerz="8" radius="5"/>
   <spawn centerx="821" centery="972" centerz="8" radius="5">
     <monster name="Giant Spider" x="-2" y="-3" z="8" spawntime="60"/>
-    <monster name="Giant Spider" x="1" y="4" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="921" centery="972" centerz="8" radius="2">
     <monster name="Slithid Scout" x="1" y="1" z="8" spawntime="180"/>
@@ -2074,7 +2061,6 @@
   </spawn>
   <spawn centerx="875" centery="982" centerz="8" radius="5">
     <monster name="Giant Spider" x="-2" y="-2" z="8" spawntime="60"/>
-    <monster name="Giant Spider" x="5" y="5" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="826" centery="983" centerz="8" radius="5">
     <monster name="Giant Spider" x="2" y="-1" z="8" spawntime="60"/>
@@ -2133,7 +2119,6 @@
     <monster name="Giant Spider" x="-1" y="1" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="779" centery="1004" centerz="8" radius="5">
-    <monster name="Giant Spider" x="4" y="-4" z="8" spawntime="60"/>
     <monster name="Giant Spider" x="0" y="5" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="835" centery="1005" centerz="8" radius="5">
@@ -2160,7 +2145,6 @@
     <monster name="Giant Spider" x="2" y="2" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="881" centery="1012" centerz="8" radius="5">
-    <monster name="Giant Spider" x="3" y="-4" z="8" spawntime="60"/>
     <monster name="Giant Spider" x="-1" y="3" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="1081" centery="1012" centerz="8" radius="4">
@@ -2171,7 +2155,6 @@
     <monster name="Swamp Troll" x="3" y="4" z="8" spawntime="180"/>
   </spawn>
   <spawn centerx="739" centery="1013" centerz="8" radius="5">
-    <monster name="Giant Spider" x="0" y="-4" z="8" spawntime="60"/>
     <monster name="Giant Spider" x="2" y="4" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="842" centery="1013" centerz="8" radius="5">
@@ -2206,16 +2189,13 @@
     <monster name="Rotworm" x="-2" y="1" z="8" spawntime="180"/>
   </spawn>
   <spawn centerx="773" centery="1020" centerz="8" radius="5">
-    <monster name="Giant Spider" x="4" y="-2" z="8" spawntime="60"/>
     <monster name="Giant Spider" x="-4" y="5" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="752" centery="1022" centerz="8" radius="5">
-    <monster name="Giant Spider" x="4" y="-4" z="8" spawntime="60"/>
     <monster name="Giant Spider" x="-2" y="1" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="871" centery="1022" centerz="8" radius="5">
     <monster name="Giant Spider" x="4" y="-2" z="8" spawntime="60"/>
-    <monster name="Giant Spider" x="-2" y="0" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="1139" centery="1023" centerz="8" radius="3">
     <monster name="Carrion Worm" x="-1" y="0" z="8" spawntime="180"/>
@@ -2230,7 +2210,6 @@
   <spawn centerx="849" centery="1027" centerz="8" radius="5">
     <monster name="Giant Spider" x="-2" y="-4" z="8" spawntime="60"/>
     <monster name="Giant Spider" x="2" y="1" z="8" spawntime="60"/>
-    <monster name="Giant Spider" x="-3" y="4" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="1076" centery="1027" centerz="8" radius="3">
     <monster name="Swamp Troll" x="1" y="-2" z="8" spawntime="180"/>
