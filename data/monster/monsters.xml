@@ -308,6 +308,7 @@
 	<monster name="dwarf guard" file="dwarves/dwarf guard.xml"/>
 	<monster name="dwarf soldier" file="dwarves/dwarf soldier.xml"/>
 	<monster name="dwarf" file="dwarves/dwarf.xml"/>
+	<monster name="enslaved dwarf" file="dwarves/enslaved dwarf.xml"/>
 	<monster name="foreman kneebiter" file="dwarves/foreman kneebiter.xml"/>
 	<monster name="mad technomancer" file="dwarves/mad technomancer.xml"/>
 	
