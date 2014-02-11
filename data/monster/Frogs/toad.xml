@@ -49,6 +49,6 @@
     <item id="2667" chance="18780"/> -- fish
 	<item id="10557" chance="4810"/><!-- Poisonous Slime -->
     <item id="2398" chance="2910"/> -- Mace
-    <item id="7758" chance="150"/> -- War Hammer
+    <item id="2391" chance="150"/> -- War Hammer
   </loot>
 </monster>
